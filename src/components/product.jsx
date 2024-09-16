@@ -8,7 +8,7 @@ const Product = () => {
         <span className="font-bold text-4xl">Our Product</span>
       </div>
       <div className="flex justify-center container">
-        <div className="grid grid-cols-1 grid-rows-4 mt-16 gap-10 md:grid-cols-2 xl:grid-cols-4">
+        <div className="grid grid-cols-1 grid-rows-2 mt-16 gap-10 md:grid-cols-2 xl:grid-cols-4">
           {productsData.map((item) => (
             <div key={item.id} className="relative">
               <div className="bg-gray-500  absolute top-0 left-0 z-10 w-full h-full opacity-0 duration-300 flex flex-col items-center justify-center hover:opacity-65">
