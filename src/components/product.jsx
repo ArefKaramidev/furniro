@@ -36,6 +36,11 @@ const Product = () => {
           ))}
         </div>
       </div>
+      <div className="text-center mt-12">
+        <button className="bg-white  border-primary px-24 border-2 py-3 text-primary">
+          Show More
+        </button>
+      </div>
     </>
   );
 };

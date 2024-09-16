@@ -1,6 +1,8 @@
 import bg from "/img/scandinavian-interior-mockup-wall-decal-background 1.png";
 import MiddleSection from "./MiddleSection";
 import Product from "./product";
+import Slide from "./slide";
+import FuniroFurnitureSection from "./FuniroFurnitureSection";
 
 const Main = () => {
   return (
@@ -27,6 +29,8 @@ const Main = () => {
       </div>
       <MiddleSection />
       <Product />
+      <Slide />
+      <FuniroFurnitureSection />
     </>
   );
 };
