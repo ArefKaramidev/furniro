@@ -8,7 +8,7 @@ const Product = () => {
         <span className="font-bold text-4xl">Our Product</span>
       </div>
       <div className="flex justify-center container">
-        <div className="grid grid-cols-4 grid-rows-2 mt-16 gap-10">
+        <div className="grid grid-cols-1 grid-rows-4 mt-16 gap-10 md:grid-cols-2 xl:grid-cols-4">
           {productsData.map((item) => (
             <div key={item.id} className="relative">
               <div className="bg-gray-500  absolute top-0 left-0 z-10 w-full h-full opacity-0 duration-300 flex flex-col items-center justify-center hover:opacity-65">
@@ -21,15 +21,17 @@ const Product = () => {
                   <img src="/public/img/share.png" alt="" />
                 </div>
               </div>
-              <img src={item.image} alt="" />
-              <div className="flex flex-col items-start justify-between bg-[#F4F5F7] p-3">
-                <span className="font-bold text-xl">{item.title}</span>
-                <span className="text-[#B0B0B0]">{item.des}</span>
-                <div>
-                  <span className="font-bold text-xl">{item.price} </span>
-                  <span className="ml-2 line-through text-[#B0B0B0]">
-                    {item.price}
-                  </span>
+              <div>
+                <img src={item.image} alt="" />
+                <div className="flex flex-col items-start justify-between bg-[#F4F5F7] p-3">
+                  <span className="font-bold text-xl">{item.title}</span>
+                  <span className="text-[#B0B0B0]">{item.des}</span>
+                  <div>
+                    <span className="font-bold text-xl">{item.price} </span>
+                    <span className="ml-2 line-through text-[#B0B0B0]">
+                      {item.price}
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
