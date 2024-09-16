@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer className="container">
+    <footer>
       <div className="w-full flex justify-center ">
         <div className="w-full h-[2px] bg-gray-300 mb-24 "></div>
       </div>
@@ -47,10 +47,10 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="w-full flex justify-center mb-10">
+      <div className="w-full flex justify-center mb-10 container">
         <div className="w-full h-[2px] bg-gray-300"></div>
       </div>
-      <div className="mb-10">
+      <div className="mb-10 container">
         <span className="font-medium text-black">
           2023 furino. All rights reverved
         </span>
