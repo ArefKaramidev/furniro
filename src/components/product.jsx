@@ -7,15 +7,15 @@ const Product = () => {
       <div className="text-center mt-24">
         <span className="font-bold text-4xl">Our Product</span>
       </div>
-      <div className="flex justify-center">
+      <div className="flex justify-center container">
         <div className="grid grid-cols-4 grid-rows-2 mt-16 gap-10">
           {productsData.map((item) => (
             <div key={item.id} className="relative">
-              <div className="bg-gray-500  absolute top-0 left-0 z-10 w-72 h-[25rem] opacity-0 duration-300 flex flex-col items-center justify-center hover:opacity-65">
+              <div className="bg-gray-500  absolute top-0 left-0 z-10 w-full h-full opacity-0 duration-300 flex flex-col items-center justify-center hover:opacity-65">
                 <button className="bg-seconday text-primary px-12 py-3 opacity-">
                   Add to cart
                 </button>
-                <div className="flex mt-4">
+                <div className="flex flex-wrap justify-center items-center mt-4">
                   <img src="/public/img/likeProduct.png" alt="" />
                   <img src="/public/img/compare.png" alt="" className="px-4" />
                   <img src="/public/img/share.png" alt="" />
