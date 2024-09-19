@@ -1,18 +1,18 @@
 export const links = [
   {
     title: "Home",
-    path: "../components/Home.jsx",
+    path: "/",
   },
   {
     title: "Shop",
-    path: "../components/Shop.jsx",
+    path: "/shop",
   },
   {
     title: "About",
-    path: "../components/About.jsx",
+    path: "/about",
   },
   {
     title: "Contact",
-    path: "../components/Contact.jsx",
+    path: "/contact",
   },
 ];
