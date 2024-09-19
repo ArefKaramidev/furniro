@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import { productsData } from "../data/productsData";
 
 const Product = () => {
@@ -6,7 +7,7 @@ const Product = () => {
       <div className="flex justify-center container">
         <div className="grid grid-cols-1 grid-rows-2 mt-16 gap-10 md:grid-cols-2 xl:grid-cols-4">
           {productsData.map((item) => (
-            <div key={item.id} className="relative">
+            <NavLink to={`/shop/${item.id}`} key={item.id} className="relative">
               <div className="bg-gray-500  absolute top-0 left-0 z-10 w-full h-full opacity-0 duration-300 flex flex-col items-center justify-center hover:opacity-65">
                 <button className="bg-seconday text-primary px-12 py-3 opacity-">
                   Add to cart
@@ -30,7 +31,7 @@ const Product = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </NavLink>
           ))}
         </div>
       </div>
