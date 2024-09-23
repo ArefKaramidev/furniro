@@ -1,11 +1,10 @@
 import { NavLink } from "react-router-dom";
-import { productsData } from "../data/productsData";
-
-const HomeProduct = () => {
+import { productsData } from "../../data/productsData";
+const RelatedProducts = () => {
   return (
     <>
-      <div className="text-center mt-24">
-        <span className="font-bold text-4xl">Our Product</span>
+      <div className="text-center">
+        <span className="font-medium text-2xl">Related Products</span>
       </div>
       <div className="flex justify-center container">
         <div className="grid grid-cols-1 grid-rows-2 mt-16 gap-10 md:grid-cols-2 xl:grid-cols-4">
@@ -38,7 +37,7 @@ const HomeProduct = () => {
           ))}
         </div>
       </div>
-      <div className="text-center mt-12">
+      <div className="text-center my-12 ">
         <button className="bg-white  border-primary px-24 border-2 py-3 text-primary">
           Show More
         </button>
@@ -47,4 +46,4 @@ const HomeProduct = () => {
   );
 };
 
-export default HomeProduct;
+export default RelatedProducts;

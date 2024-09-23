@@ -6,6 +6,8 @@ import stars from "../../assets/icons/stars..svg";
 import facebook from "../../assets/icons/facebook.svg";
 import linkedIn from "../../assets/icons/linkedin.svg";
 import twitter from "../../assets/icons/twitter.svg";
+import SetData from "../../hooks/useSetData";
+import useSetData from "../../hooks/useSetData";
 
 const ProductDetail = () => {
   const [count, setCount] = useState(1);
@@ -78,9 +80,12 @@ const ProductDetail = () => {
                 +
               </button>
             </div>
-            <NavLink className="px-16 py-4 border-black border rounded-xl font-medium text-xl">
+            <button
+              className="px-16 py-4 border-black border rounded-xl font-medium text-xl"
+              onClick={useSetData(product)}
+            >
               Add To Cart
-            </NavLink>
+            </button>
             <NavLink className="px-16 py-4 border-black border rounded-xl font-medium text-xl">
               + Compare
             </NavLink>
