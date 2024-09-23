@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom";
+
 const MainCart = () => {
   return (
     <>
@@ -19,9 +21,12 @@ const MainCart = () => {
             <span className="font-medium text-primary">price</span>
           </div>
           <div>
-            <button className="text-xl border border-black px-14 py-2 rounded-xl">
+            <NavLink
+              to={"/checkout"}
+              className="text-xl border border-black px-14 py-2 rounded-xl"
+            >
               Check Out
-            </button>
+            </NavLink>
           </div>
         </div>
       </div>
