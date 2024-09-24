@@ -1,40 +1,72 @@
 import { NavLink } from "react-router-dom";
 import useCart from "../../hooks/useCart";
+import trash from "../../assets/icons/trash.svg";
 
 const MainCart = () => {
-  const { cartData } = useCart();
+  const { cartData, removeCartItem } = useCart();
   return (
     <>
       <div className="flex items-start justify-around my-20">
-        <div className="flex flex-col gap-y-3">
-          <div className="flex items-center bg-seconday p-5 gap-x-48">
-            <span className=" font-medium text-xl">Product</span>
-            <span className=" font-medium text-xl">Price</span>
-            <span className=" font-medium text-xl">Quantity</span>
-            <span className=" font-medium text-xl">Subtotal</span>
-          </div>
-
-          {cartData.map((item) => (
-            <div className="flex items-center bg-seconday p-5 gap-x-48">
-              <img src={item.image} alt="" />
-              <span className=" font-medium text-xl">{item.price}</span>
-              <span className=" font-medium text-xl">{item.count}</span>
-              <span className=" font-medium text-xl">
-                {item.price * item.count}
-              </span>
-            </div>
-          ))}
+        <div>
+          <table
+            border={0}
+            className="text-left mt-5 border-spacing-y-8 border-separate border-spacing-x-20"
+          >
+            <thead>
+              <tr>
+                <th></th>
+                <th>Product</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Subtotal</th>
+              </tr>
+            </thead>
+            <tbody>
+              {cartData.map((item) => (
+                <tr key={item.id}>
+                  <td>
+                    <img
+                      src={item.image}
+                      alt=""
+                      className="w-32 h-32 rounded-md"
+                    />
+                  </td>
+                  <td className="font-medium text-gray-400">{item.title}</td>
+                  <td className="text-gray-400 font-normal">
+                    Rs. {item.price}
+                  </td>
+                  <td>
+                    <input
+                      type="text"
+                      value={item.count}
+                      className="text-center border border-gray-400 rounded-md w-10 h-10 py-2"
+                    />
+                  </td>
+                  <td>Rs .{item.count * item.price}</td>
+                  <td>
+                    <button
+                      onClick={() => {
+                        removeCartItem(item.id);
+                      }}
+                    >
+                      <img src={trash} alt="" />
+                    </button>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
 
         <div className="bg-seconday py-10 text-center space-y-5 px-20">
           <span className="font-bold text-2xl">Cart Totals</span>
           <div className="flex items-center justify-evenly gap-x-14">
-            <span className="font-medium">Sabtotal</span>
+            <span className="font-medium">Subtotal</span>
             <span className="font-medium">price</span>
           </div>
           <div className="flex items-center justify-evenly gap-x-14">
             <span className="font-medium">Total</span>
-            <span className="font-medium text-primary">price</span>
+            <span className="font-medium text-primary"></span>
           </div>
           <div>
             <NavLink

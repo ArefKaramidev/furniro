@@ -44,7 +44,7 @@ export const productsData = [
     title: "Muggo",
     image: "/img/image 6.png",
     des: "Small mug",
-    price: 150.0,
+    price: 15000000,
     count: 1,
   },
   {

@@ -22,6 +22,7 @@ const useCart = () => {
       productSavedData = [...productSavedData, data];
     } else {
       productSavedData[prevProductIndex].count += 1;
+      // setCartData(productSavedData);
     }
     setToLocalStorage(productSavedData);
     setCartData(productSavedData);
@@ -29,7 +30,6 @@ const useCart = () => {
 
   const totalCount = () => {
     const result = cartData.reduce((prev, current) => prev + current.count, 0);
-    console.log("resullllllttt =>>>>>>>>", result);
     return result;
   };
 
