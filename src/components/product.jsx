@@ -1,7 +1,9 @@
 import { NavLink } from "react-router-dom";
 import { productsData } from "../data/productsData";
+import useCart from "../hooks/useCart";
 
 const Product = () => {
+  const { addToCart } = useCart();
   return (
     <>
       <div className="flex justify-center container">
@@ -9,7 +11,10 @@ const Product = () => {
           {productsData.map((item) => (
             <NavLink to={`/shop/${item.id}`} key={item.id} className="relative">
               <div className="bg-gray-500  absolute top-0 left-0 z-10 w-full h-full opacity-0 duration-300 flex flex-col items-center justify-center hover:opacity-65">
-                <button className="bg-seconday text-primary px-12 py-3 opacity-">
+                <button
+                  onClick={() => addToCart(item)}
+                  className="bg-seconday text-primary px-12 py-3 opacity-"
+                >
                   Add to cart
                 </button>
                 <div className="flex flex-wrap justify-center items-center mt-4">

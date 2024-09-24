@@ -9,7 +9,6 @@ export const links = [
   },
   {
     title: "About",
-    path: "/about",
   },
   {
     title: "Contact",

@@ -6,13 +6,13 @@ import stars from "../../assets/icons/stars..svg";
 import facebook from "../../assets/icons/facebook.svg";
 import linkedIn from "../../assets/icons/linkedin.svg";
 import twitter from "../../assets/icons/twitter.svg";
-import SetData from "../../hooks/useSetData";
-import useSetData from "../../hooks/useSetData";
+import useCart from "../../hooks/useCart";
 
 const ProductDetail = () => {
   const [count, setCount] = useState(1);
   const param = useParams().productId;
   const product = productsData.find((item) => item.id == param);
+  const { addToCart } = useCart();
 
   return (
     <>
@@ -82,7 +82,7 @@ const ProductDetail = () => {
             </div>
             <button
               className="px-16 py-4 border-black border rounded-xl font-medium text-xl"
-              onClick={useSetData(product)}
+              onClick={() => addToCart(product)}
             >
               Add To Cart
             </button>
