@@ -1,18 +1,18 @@
 import { useParams } from "react-router";
 import { productsData } from "../../data/productsData";
 import { NavLink } from "react-router-dom";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import stars from "../../assets/icons/stars..svg";
 import facebook from "../../assets/icons/facebook.svg";
 import linkedIn from "../../assets/icons/linkedin.svg";
 import twitter from "../../assets/icons/twitter.svg";
-import useCart from "../../hooks/useCart";
+import { cartContext } from "../../context/cartContext";
 
 const ProductDetail = () => {
   const [count, setCount] = useState(1);
   const param = useParams().productId;
   const product = productsData.find((item) => item.id == param);
-  const { addToCart } = useCart();
+  const { addToCart } = useContext(cartContext);
 
   const plusCount = (obj) => {
     setCount(count + 1);

@@ -1,8 +1,9 @@
+import { useContext } from "react";
 import remove from "../assets/icons/remove.svg";
-import useCart from "../hooks/useCart";
+import { cartContext } from "../context/cartContext";
 
 const CartItem = () => {
-  const { cartData, removeCartItem } = useCart();
+  const { cartData, removeCartItem } = useContext(cartContext);
 
   return (
     <>

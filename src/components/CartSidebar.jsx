@@ -1,9 +1,11 @@
 import { NavLink } from "react-router-dom";
 import CartItem from "./CartItem";
-import useCart from "../hooks/useCart";
 import { useContext } from "react";
+import { cartContext } from "../context/cartContext";
 
 const CartSidebar = ({ openCart }) => {
+  const { getTotal } = useContext(cartContext);
+
   return (
     <>
       <div className="absolute bg-white top-0 right-0 px-5 py-2 z-10">
@@ -17,7 +19,9 @@ const CartSidebar = ({ openCart }) => {
           </div>
           <div className="flex items-center justify-evenly py-5">
             <span className="font-medium">Subtotal</span>
-            <span className="text-primary font-medium text-xl">{}</span>
+            <span className="text-primary font-medium text-xl">
+              {getTotal()}
+            </span>
           </div>
         </div>
 

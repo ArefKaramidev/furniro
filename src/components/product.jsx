@@ -1,12 +1,13 @@
 import { NavLink } from "react-router-dom";
 import { productsData } from "../data/productsData";
-import useCart from "../hooks/useCart";
 import share from "../assets/icons/share.svg";
 import compair from "../assets/icons/compair.svg";
 import likeProduct from "../assets/icons/likeProduct.svg";
+import { useContext } from "react";
+import { cartContext } from "../context/cartContext";
 
 const Product = () => {
-  const { addToCart } = useCart();
+  const { addToCart } = useContext(cartContext);
   return (
     <>
       <div className="flex justify-center container">

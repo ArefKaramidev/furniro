@@ -1,10 +1,11 @@
 import { NavLink } from "react-router-dom";
-import useCart from "../../hooks/useCart";
 import trash from "../../assets/icons/trash.svg";
+import { useContext } from "react";
+import { cartContext } from "../../context/cartContext";
 
 const MainCart = () => {
-  const { cartData, removeCartItem, totalPrice } = useCart();
-  const price = totalPrice();
+  const { cartData, getTotal } = useContext(cartContext);
+
   return (
     <>
       <div className="flex items-start justify-around my-20">
@@ -43,7 +44,7 @@ const MainCart = () => {
                       className="text-center border border-gray-400 rounded-md w-10 h-10 py-2"
                     />
                   </td>
-                  <td>Rs .{item.count * item.price}</td>
+                  <td>Rs .{item.price}</td>
                   <td>
                     <button
                       onClick={() => {
@@ -67,7 +68,7 @@ const MainCart = () => {
           </div>
           <div className="flex items-center justify-evenly gap-x-14">
             <span className="font-medium">Total</span>
-            <span className="font-medium text-primary">Rs . {price}</span>
+            <span className="font-medium text-primary">Rs . {getTotal()}</span>
           </div>
           <div>
             <NavLink
