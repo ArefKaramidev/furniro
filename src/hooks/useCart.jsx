@@ -30,6 +30,12 @@ const useCart = () => {
 
   const totalCount = () => {
     const result = cartData.reduce((prev, current) => prev + current.count, 0);
+    console.log(result);
+
+    return result;
+  };
+  const totalPrice = () => {
+    const result = cartData.reduce((prev, current) => prev + current.price, 0);
     return result;
   };
 
@@ -39,7 +45,7 @@ const useCart = () => {
     setCartData(cart);
   };
 
-  return { cartData, addToCart, totalCount, removeCartItem };
+  return { cartData, addToCart, totalPrice, removeCartItem };
 };
 
 export default useCart;

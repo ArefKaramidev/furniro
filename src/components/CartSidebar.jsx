@@ -24,17 +24,17 @@ const CartSidebar = ({ openCart }) => {
         <div className="flex items-center justify-evenly py-7 gap-x-2">
           <NavLink
             to={"/cart"}
-            className="bg-white rounded-full px-8 py-1 border-black border-2"
+            className="bg-white rounded-full px-8 py-1 border-black border-2 hover:bg-black hover:text-white active:scale-75 duration-150"
           >
             Cart
           </NavLink>
           <NavLink
             to={"/checkout"}
-            className="bg-white rounded-full px-8 py-1 border-black border-2"
+            className="bg-white rounded-full px-8 py-1 border-black border-2 hover:bg-black hover:text-white active:scale-75 duration-150"
           >
             Checkout
           </NavLink>
-          <NavLink className="bg-white rounded-full px-8 py-1 border-black border-2">
+          <NavLink className="bg-white rounded-full px-8 py-1 border-black border-2 hover:bg-black hover:text-white active:scale-75 duration-150">
             Comparison
           </NavLink>
         </div>

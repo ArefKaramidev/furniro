@@ -25,7 +25,9 @@ const Navbar = () => {
             <NavLink
               key={item.path}
               to={item.path}
-              className={"px-10 font-medium text-lg"}
+              className={
+                "px-10 font-medium text-lg duration-150 py-2"
+              }
             >
               {item.title}
             </NavLink>

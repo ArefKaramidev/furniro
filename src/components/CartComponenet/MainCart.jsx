@@ -3,7 +3,8 @@ import useCart from "../../hooks/useCart";
 import trash from "../../assets/icons/trash.svg";
 
 const MainCart = () => {
-  const { cartData, removeCartItem } = useCart();
+  const { cartData, removeCartItem, totalPrice } = useCart();
+  const price = totalPrice();
   return (
     <>
       <div className="flex items-start justify-around my-20">
@@ -66,12 +67,12 @@ const MainCart = () => {
           </div>
           <div className="flex items-center justify-evenly gap-x-14">
             <span className="font-medium">Total</span>
-            <span className="font-medium text-primary"></span>
+            <span className="font-medium text-primary">Rs . {price}</span>
           </div>
           <div>
             <NavLink
               to={"/checkout"}
-              className="text-xl border border-black px-14 py-2 rounded-xl"
+              className="text-xl border border-black px-14 py-2 rounded-xl hover:text-white hover:bg-black duration-150"
             >
               Check Out
             </NavLink>

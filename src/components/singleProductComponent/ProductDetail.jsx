@@ -88,12 +88,12 @@ const ProductDetail = () => {
               </button>
             </div>
             <button
-              className="px-16 py-4 border-black border rounded-xl font-medium text-xl"
+              className="px-16 py-4 border-black border rounded-xl font-medium text-xl hover:bg-black hover:text-white active:scale-95 duration-150"
               onClick={() => addToCart(product)}
             >
               Add To Cart
             </button>
-            <NavLink className="px-16 py-4 border-black border rounded-xl font-medium text-xl">
+            <NavLink className="px-16 py-4 border-black border rounded-xl font-medium text-xl hover:bg-black hover:text-white active:scale-95 duration-150">
               + Compare
             </NavLink>
           </div>
