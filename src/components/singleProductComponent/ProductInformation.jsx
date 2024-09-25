@@ -28,7 +28,7 @@ const ProductInformation = () => {
           easy and stylish travel.
         </span>
       </div>
-      <div className="flex items-center justify-evenly container mt-10  ">
+      <div className="flex items-center justify-evenly my-10  ">
         <img src="/public/img/info.png" alt="" />
         <img src="/public/img/info2.png" alt="" />
       </div>

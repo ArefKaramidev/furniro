@@ -7,7 +7,7 @@ const CartItem = () => {
   return (
     <>
       {cartData.map((item) => (
-        <div key={item.id} className="flex items-center gap-x-12 px-10">
+        <div key={item.id} className="flex items-center justify-between px-10">
           <img src={item.image} alt="" className="w-20 h-20 rounded-md" />
           <div className="flex flex-col">
             <span>{item.title}</span>

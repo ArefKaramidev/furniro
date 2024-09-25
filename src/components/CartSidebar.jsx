@@ -1,5 +1,7 @@
 import { NavLink } from "react-router-dom";
 import CartItem from "./CartItem";
+import useCart from "../hooks/useCart";
+import { useContext } from "react";
 
 const CartSidebar = ({ openCart }) => {
   return (
@@ -15,7 +17,7 @@ const CartSidebar = ({ openCart }) => {
           </div>
           <div className="flex items-center justify-evenly py-5">
             <span className="font-medium">Subtotal</span>
-            <span className="text-primary font-medium text-xl">270000</span>
+            <span className="text-primary font-medium text-xl">{}</span>
           </div>
         </div>
 

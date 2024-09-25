@@ -77,7 +77,9 @@ const ProductDetail = () => {
               >
                 -
               </button>
-              <span className="font-medium text-xl">{count}</span>
+              <span className="font-medium text-xl">
+                {product.count == 1 ? count : product.count}
+              </span>
               <button
                 className="px-4 py-4 rounded-tr-md rounded-br-md"
                 onClick={() => {

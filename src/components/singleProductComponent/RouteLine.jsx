@@ -1,7 +1,7 @@
 const RouteLine = () => {
   return (
     <>
-      <div className="bg-seconday h-24 flex justify-between items-center container">
+      <div className="bg-seconday h-24 flex justify-between items-center px-32">
         <div className="flex items-center gap-4">
           <div className="flex items-center justify-center gap-x-4">
             <span className="font-medium text-gray-400">Home</span>

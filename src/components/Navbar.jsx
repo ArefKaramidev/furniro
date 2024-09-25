@@ -18,32 +18,34 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="flex items-center justify-between py-5 px-16">
+      <div className="flex items-center justify-between py-5 px-16 overflow-hidden">
         <img src={titleLogo} alt="" />
         <div>
           {links.map((item) => (
             <NavLink
               key={item.path}
               to={item.path}
-              className={
-                "px-10 font-medium text-lg duration-150 py-2"
-              }
+              className={"px-10 font-medium text-lg py-2"}
             >
               {item.title}
             </NavLink>
           ))}
         </div>
         <div className="flex items-center justify-evenly gap-x-10">
-          <img src={profile} alt="" />
-          <img src={serach} alt="" />
-          <img src={like} alt="" />
+          <img src={profile} alt="" className="hover:mb-2 duration-150" />
+          <img src={serach} alt="" className="hover:mb-2 duration-150" />
+          <img src={like} alt="" className="hover:mb-2 duration-150" />
           <button
             className="relative z-20"
             onClick={() => {
               setIsOpen(!isOpen);
             }}
           >
-            <img src={isOpen ? closeCart : cart} alt="" />
+            <img
+              src={isOpen ? closeCart : cart}
+              alt=""
+              className="hover:mb-2 duration-150"
+            />
           </button>
         </div>
       </div>
