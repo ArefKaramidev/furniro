@@ -12,7 +12,7 @@ const RelatedProducts = () => {
       <div className="text-center">
         <span className="font-medium text-2xl">Related Products</span>
       </div>
-      <div className="flex justify-center container">
+      <div className="flex justify-center lg:container">
         <div className="grid grid-cols-1 grid-rows-2 mt-16 gap-10 md:grid-cols-2 xl:grid-cols-4">
           {productsData.map((item) => (
             <NavLink

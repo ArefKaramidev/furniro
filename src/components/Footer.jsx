@@ -1,10 +1,10 @@
 const Footer = () => {
   return (
     <footer>
-      <div className="w-full flex justify-center ">
+      <div className="w-full flex justify-center  ">
         <div className="w-full h-[2px] bg-gray-300 mb-24 "></div>
       </div>
-      <div className="flex items-start justify-evenly mb-32 ">
+      <div className="flex  flex-col items-center  gap-y-10 justify-evenly mb-32 lg:flex-row lg:items-start lg:justify-evenly">
         <div className="flex flex-col items-start">
           <span className="font-bold text-3xl mb-24">Funiro.</span>
           <span className="font-normal text-lg text-gray-400">

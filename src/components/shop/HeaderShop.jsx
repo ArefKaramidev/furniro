@@ -9,7 +9,7 @@ const HeaderShop = () => {
         <div className="relative flex items-center justify-center">
           <img src="/public/img/headershop.png" alt="" className="w-full" />
           <div className="absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center">
-            <span className="font-bold text-5xl">Shop</span>
+            <span className="font-bold text-3xl lg:text-5xl">Shop</span>
             <div className="flex items-center justify-center space-x-2 mt-4">
               <span className="font-medium">Home </span>
               <span className="font-medium text-xl"> {" > "} </span>
@@ -18,7 +18,7 @@ const HeaderShop = () => {
           </div>
         </div>
         <div className="bg-seconday h-24 flex justify-between items-center px-24">
-          <div className="flex items-center gap-4">
+          <div className="items-center gap-4 hidden lg:flex">
             <div className="flex items-center justify-center gap-x-4">
               <img src={filter} alt="" />
               <span className="font-medium">Filter</span>
@@ -31,7 +31,7 @@ const HeaderShop = () => {
             </div>
           </div>
 
-          <div className="flex items-center justify-center gap-x-5">
+          <div className="flex items-start justify-center gap-x-5">
             <div>
               <span className="font-medium">Show </span>
               <input

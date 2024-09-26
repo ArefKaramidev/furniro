@@ -7,7 +7,7 @@ const MiddleSection = () => {
     <>
       <div className="flex flex-col items-center mt-16">
         <span className="font-bold text-2xl">Browse The Range</span>
-        <span className="text-[#666666]">
+        <span className="text-[#666666] px-10 text-center lg:px-0">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         </span>
 

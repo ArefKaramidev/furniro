@@ -9,7 +9,7 @@ const FuniroFurnitureSection = () => {
           <span className="font-bold text-4xl">#FuniroFurniture</span>
         </div>
 
-        <div className="grid grid-cols-5 mt-10 grid-rows-2 gap-y-5 gap-x-4 place-content-stretch container">
+        <div className="grid grid-cols-2 mt-10 grid-rows-2 gap-y-5 gap-x-4  place-content-stretch lg:grid-cols-5 lg:container">
           <img
             src="/public/img/goldun.png"
             alt=""

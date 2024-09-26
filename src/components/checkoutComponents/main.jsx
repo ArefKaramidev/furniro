@@ -1,7 +1,7 @@
 const CheckoutMain = () => {
   return (
     <>
-      <div className="flex items-start justify-evenly mb-20">
+      <div className="flex flex-col-reverse items-center justify-evenly gap-y-20 mb-20 lg:flex-row lg:items-start lg:gap-y-0 overflow-x-hidden">
         <form action="" className="flex flex-col gap-y-8">
           <span className="font-bold text-2xl inline-block mb-8">
             Billing details
@@ -91,14 +91,10 @@ const CheckoutMain = () => {
           />
         </form>
 
-        <div>
+        <div className="px-10">
           <div className="flex items-center justify-around gap-x-60">
             <span className="font-medium text-xl">Product</span>
             <span className="font-medium text-xl">Subtotal</span>
-          </div>
-          <div className="flex items-center justify-around ">
-            {/* <span className="font-medium text-xl">name product</span> */}
-            {/* <span className="font-medium text-xl">price</span> */}
           </div>
           <div className="flex items-center justify-around gap-x-60">
             <span className="font-medium text-sm">Subtotal</span>

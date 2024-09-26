@@ -21,7 +21,7 @@ const ProductDetail = () => {
 
   return (
     <>
-      <div className="flex justify-evenly mt-10">
+      <div className="flex flex-col justify-evenly w-full px-10 mt-10 items-center gap-y-20 lg:flex-row lg:items-start lg:px-0">
         <div className="flex items-start">
           <div className=" space-y-10">
             <img src="/public/img/shop2.png" alt="" />
@@ -35,19 +35,19 @@ const ProductDetail = () => {
 
           {/* --------------------- */}
         </div>
-        <div className="flex flex-col gap-5">
+        <div className="flex flex-col gap-5 items-center lg:items-start">
           <span className="text-4xl font-medium">{product.title}</span>
           <span className="text-3xl font-medium text-gray-400">
             {product.price}
           </span>
-          <div className=" flex items-center gap-x-8">
-            <img src={stars} alt="" />
-            <div className="w-8 h-[2px] bg-gray-400 rotate-90"></div>
-            <span className="text-gray-300">5 Customer Review</span>
+          <div className="flex flex-col items-center lg:items-start gap-y-10">
+            <div className=" flex items-center gap-x-8">
+              <img src={stars} alt="" />
+              <div className="w-8 h-[2px] bg-gray-400 rotate-90"></div>
+              <span className="text-gray-300">5 Customer Review</span>
+            </div>
+            <p className="text-justify text-sm font-medium">{product.des}</p>
           </div>
-          <p className="text-justify w-[30rem] text-sm font-medium">
-            {product.des}
-          </p>
 
           <div className="flex flex-col gap-y-2">
             <span className="text-gray-300">Size</span>
@@ -69,7 +69,7 @@ const ProductDetail = () => {
             </div>
           </div>
 
-          <div className="flex items-center gap-x-3 border-b pb-20">
+          <div className="flex flex-col gap-y-10 items-center gap-x-3 border-b pb-20 lg:flex-row lg:gap-y-00">
             <div className="flex items-center justify-between border-2 rounded-xl w-32">
               <button
                 className="py-4 px-4 rounded-tl-md rounded-bl-md"

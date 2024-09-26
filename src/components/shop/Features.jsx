@@ -6,7 +6,7 @@ import post from "../../assets/icons/post.svg";
 const Features = () => {
   return (
     <>
-      <div className="bg-seconday flex items-center justify-between py-20 px-16">
+      <div className="bg-seconday flex flex-col items-start justify-between gap-20 py-20 px-16 lg:flex-row lg:items-center lg:gap-0">
         <div className="flex items-center gap-2">
           <img src={champion} alt="" />
           <div className="flex flex-col">

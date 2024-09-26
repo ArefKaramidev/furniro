@@ -1,14 +1,14 @@
 const ProductInformation = () => {
   return (
     <>
-      <div className="text-center space-x-12 mb-12">
+      <div className="text-center space-x-12 mb-12 flex flex-col items-center gap-y-5 lg:gap-y-0 lg:block">
         <span className="font-medium text-3xl">Description</span>
         <span className="font-medium text-3xl text-gray-400">
           Additional Information
         </span>
         <span className="font-medium text-3xl text-gray-400">Reviews [5]</span>
       </div>
-      <div className="flex flex-col justify-center gap-y-10 items-center text-justify container">
+      <div className="flex flex-col justify-center gap-y-10 items-center text-justify px-10 lg:container lg:px-0">
         <span>
           Embodying the raw, wayward spirit of rock ‘n’ roll, the Kilburn
           portable active stereo speaker takes the unmistakable look and <br />
@@ -28,7 +28,7 @@ const ProductInformation = () => {
           easy and stylish travel.
         </span>
       </div>
-      <div className="flex items-center justify-evenly my-10  ">
+      <div className="flex flex-col gap-y-5 px-5 items-center justify-evenly my-10 lg:flex-row lg:gap-y-0 lg:px-0">
         <img src="/public/img/info.png" alt="" />
         <img src="/public/img/info2.png" alt="" />
       </div>

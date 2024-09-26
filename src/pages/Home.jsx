@@ -4,11 +4,11 @@ import Navbar from "../components/Navbar";
 
 const Home = () => {
   return (
-    <>
+    <div className="overflow-x-hidden">
       <Navbar />
       <Main />
       <Footer />
-    </>
+    </div>
   );
 };
 

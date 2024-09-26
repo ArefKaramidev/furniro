@@ -8,11 +8,11 @@ const MainCart = () => {
 
   return (
     <>
-      <div className="flex items-start justify-around my-20">
-        <div>
+      <div className="flex flex-col items-center justify-around my-20 xl:flex-row xl:items-start">
+        <div className="overflow-x-auto w-full lg:overflow-x-hidden mb-10 lg:mb-0">
           <table
             border={0}
-            className="text-left mt-5 border-spacing-y-8 border-separate border-spacing-x-20"
+            className="text-left mt-5 border-spacing-y-8 border-separate border-spacing-x-20 w-full"
           >
             <thead>
               <tr>
@@ -26,7 +26,7 @@ const MainCart = () => {
             <tbody>
               {cartData.map((item) => (
                 <tr key={item.id}>
-                  <td>
+                  <td className="">
                     <img
                       src={item.image}
                       alt=""

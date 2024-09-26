@@ -1,14 +1,13 @@
 import { NavLink } from "react-router-dom";
-import { links } from "../data/links";
 import { useState } from "react";
 
 import profile from "../assets/icons/profile.svg";
-import serach from "../assets/icons/serach.svg";
-import like from "../assets/icons/like.svg";
 import cart from "../assets/icons/cart.svg";
-import titleLogo from "../assets/icons/title.svg";
+import logo from "../assets/icons/logo.svg";
 import CartSidebar from "./CartSidebar";
 import closeCart from "../assets/icons/closeCart.svg";
+import HamburgerMenu from "./HamburgerMenu";
+import HeaderLinks from "./LinksHeader";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,23 +17,18 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="flex items-center justify-between py-5 px-16 overflow-hidden">
-        <img src={titleLogo} alt="" />
-        <div>
-          {links.map((item) => (
-            <NavLink
-              key={item.path}
-              to={item.path}
-              className={"px-10 font-medium text-lg py-2"}
-            >
-              {item.title}
-            </NavLink>
-          ))}
+      <div className="flex  justify-between items-center py-5 px-5 overflow-hidden lg:flex lg:px-16 lg:justify-between">
+        <div className="flex items-center gap-x-4">
+          <img src={logo} alt="" />
+          <span className="font-bold text-3xl hidden lg:inline-block">
+            Furniro
+          </span>
         </div>
-        <div className="flex items-center justify-evenly gap-x-10">
+        <div className="hidden lg:flex">
+          <HeaderLinks />
+        </div>
+        <div className="flex items-center gap-x-5 lg:gap-x-10">
           <img src={profile} alt="" className="hover:mb-2 duration-150" />
-          <img src={serach} alt="" className="hover:mb-2 duration-150" />
-          <img src={like} alt="" className="hover:mb-2 duration-150" />
           <button
             className="relative z-20"
             onClick={() => {
@@ -47,6 +41,9 @@ const Navbar = () => {
               className="hover:mb-2 duration-150"
             />
           </button>
+          <div className="lg:hidden">
+            <HamburgerMenu />
+          </div>
         </div>
       </div>
       {isOpen && <CartSidebar openCart={isOpen} />}
