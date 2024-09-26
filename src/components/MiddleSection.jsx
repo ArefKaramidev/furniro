@@ -1,31 +1,56 @@
+import React, { useRef, useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/pagination";
+import "./middlesectionStyle.css";
+
 const image1 = "/img/Mask Group (1).png";
 const image2 = "/img/Image-living room.png";
 const image3 = "/img//Mask Group (4).png";
 
+import { EffectCoverflow, Pagination } from "swiper/modules";
+
 const MiddleSection = () => {
   return (
     <>
-      <div className="flex flex-col items-center mt-16">
-        <span className="font-bold text-2xl">Browse The Range</span>
-        <span className="text-[#666666] px-10 text-center lg:px-0">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        </span>
-
-        <div className="flex items-center gap-x-5 mt-16">
+      <Swiper
+        effect={"coverflow"}
+        grabCursor={true}
+        centeredSlides={true}
+        slidesPerView={"auto"}
+        initialSlide={1}
+        coverflowEffect={{
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: true,
+        }}
+        pagination={true}
+        modules={[EffectCoverflow, Pagination]}
+        className="mySwiper"
+      >
+        <SwiperSlide>
           <div className=" text-center">
             <img src={image1} alt="" className="mb-4" />
             <span className=" font-medium text-2xl">Dining</span>
           </div>
+        </SwiperSlide>
+        <SwiperSlide>
           <div className=" text-center">
             <img src={image2} alt="" className="mb-4" />
             <span className=" font-medium text-2xl">Living</span>
           </div>
+        </SwiperSlide>
+        <SwiperSlide>
           <div className=" text-center">
             <img src={image3} alt="" className="mb-4" />
-            <span className=" font-medium text-2xl">Bedroom</span>
+            <span className=" font-medium text-2xl">Bedroom</span>{" "}
           </div>
-        </div>
-      </div>
+        </SwiperSlide>
+      </Swiper>
     </>
   );
 };
