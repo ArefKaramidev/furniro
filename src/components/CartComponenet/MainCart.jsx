@@ -4,7 +4,7 @@ import { useContext } from "react";
 import { cartContext } from "../../context/cartContext";
 
 const MainCart = () => {
-  const { cartData, getTotal } = useContext(cartContext);
+  const { cartData, getTotal, removeCartItem } = useContext(cartContext);
 
   return (
     <>
