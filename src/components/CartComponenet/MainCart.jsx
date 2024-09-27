@@ -8,11 +8,11 @@ const MainCart = () => {
 
   return (
     <>
-      <div className="flex flex-col items-center justify-around my-20 xl:flex-row xl:items-start">
+      <div className="flex flex-col w-full items-center my-20 xl:flex-row xl:justify-evenly">
         <div className="overflow-x-auto w-full lg:overflow-x-hidden mb-10 lg:mb-0">
           <table
             border={0}
-            className="text-left mt-5 border-spacing-y-8 border-separate border-spacing-x-20 w-full"
+            className="text-left mt-5 border-spacing-y-8 border-separate border-spacing-x-20 w-full xl:w-auto"
           >
             <thead>
               <tr>
@@ -60,7 +60,7 @@ const MainCart = () => {
           </table>
         </div>
 
-        <div className="bg-seconday py-10 text-center space-y-5 px-20">
+        <div className="bg-seconday py-10 text-center space-y-5 px-10 w-96">
           <span className="font-bold text-2xl">Cart Totals</span>
           <div className="flex items-center justify-evenly gap-x-14">
             <span className="font-medium">Subtotal</span>

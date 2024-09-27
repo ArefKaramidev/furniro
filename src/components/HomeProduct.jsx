@@ -21,12 +21,13 @@ const HomeProduct = () => {
               key={item.id}
               className="relative group transition-all"
             >
+              {/* Hover overlay container */}
               <div
-                className="absolute z-20 bg-transparent
-               flex flex-col w-full h-full items-center transition-all justify-center opacity-0 group-hover:opacity-65 bg-neutral-600"
+                className="absolute z-20 bg-transparent flex flex-col w-full h-full items-center 
+    transition-all justify-center opacity-0 group-hover:opacity-50" // Changed opacity value
               />
               <div className="absolute w-full h-full flex justify-center items-center flex-col opacity-0 group-hover:opacity-100">
-                <div className="flex flex-col items-center justify-center z-50 w-full h-full">
+                <div className="flex flex-col items-center justify-center w-full h-full">
                   <button
                     className="bg-seconday text-primary px-12 py-3 duration-150 active:scale-90"
                     onClick={() => {
@@ -36,15 +37,16 @@ const HomeProduct = () => {
                     Add to cart
                   </button>
                   <div className="flex flex-wrap justify-center items-center mt-4">
-                    <img src={share} alt="" />
-                    <img src={compair} alt="" className="px-4" />
-                    <img src={likeProduct} alt="" />
+                    <img src={share} alt="Share" />
+                    <img src={compair} alt="Compare" className="px-4" />
+                    <img src={likeProduct} alt="Like" />
                   </div>
                 </div>
               </div>
+              {/* Product Image and Info */}
               <div>
-                <img src={item.image} alt="" />
-                <div className="flex flex-col items-start justify-between bg-[#F4F5F7] p-3 ">
+                <img src={item.image} alt={item.title} />
+                <div className="flex flex-col items-start justify-between bg-[#F4F5F7] p-3">
                   <span className="font-bold text-xl">{item.title}</span>
                   <span className="text-[#B0B0B0]">{item.des}</span>
                   <div>

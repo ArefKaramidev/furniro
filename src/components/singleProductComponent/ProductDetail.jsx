@@ -7,6 +7,11 @@ import facebook from "../../assets/icons/facebook.svg";
 import linkedIn from "../../assets/icons/linkedin.svg";
 import twitter from "../../assets/icons/twitter.svg";
 import { cartContext } from "../../context/cartContext";
+import first from "/public/img/shop2.png";
+import second from "/public/img/shop3.png";
+import third from "/public/img/shop4.png";
+import four from "/public/img/shop.png";
+import five from "/public/img/shop5.png";
 
 const ProductDetail = () => {
   const [count, setCount] = useState(1);
@@ -24,13 +29,13 @@ const ProductDetail = () => {
       <div className="flex flex-col justify-evenly w-full px-10 mt-10 items-center gap-y-20 lg:flex-row lg:items-start lg:px-0">
         <div className="flex items-start">
           <div className=" space-y-10">
-            <img src="/public/img/shop2.png" alt="" />
-            <img src="/public/img/shop3.png" alt="" />
-            <img src="/public/img/shop4.png" alt="" />
-            <img src="/public/img/shop.png" alt="" />
+            <img src={first} alt="" />
+            <img src={second} alt="" />
+            <img src={third} alt="" />
+            <img src={four} alt="" />
           </div>
           <div>
-            <img src="/public/img/shop5.png" alt="" />
+            <img src={five} alt="" />
           </div>
 
           {/* --------------------- */}

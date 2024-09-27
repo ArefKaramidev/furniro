@@ -1,13 +1,14 @@
 import filter from "../../assets/icons/filter.svg";
 import menu from "../../assets/icons/menu.svg";
 import list from "../../assets/icons/list.svg";
+import headerShop from "/public/img/headershop.png";
 
 const HeaderShop = () => {
   return (
     <>
       <header className="mb-8">
         <div className="relative flex items-center justify-center">
-          <img src="/public/img/headershop.png" alt="" className="w-full" />
+          <img src={headerShop} alt="" className="w-full" />
           <div className="absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center">
             <span className="font-bold text-3xl lg:text-5xl">Shop</span>
             <div className="flex items-center justify-center space-x-2 mt-4">
