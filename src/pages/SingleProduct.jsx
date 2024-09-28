@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import ProductDetail from "../components/singleProductComponent/ProductDetail";
@@ -6,6 +7,9 @@ import RelatedProducts from "../components/singleProductComponent/RelatedProduct
 import RouteLine from "../components/singleProductComponent/RouteLine";
 
 const SingleProduct = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <Navbar />

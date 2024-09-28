@@ -3,10 +3,13 @@ import { productsData } from "../data/productsData";
 import share from "../assets/icons/share.svg";
 import compair from "../assets/icons/compair.svg";
 import likeProduct from "../assets/icons/likeProduct.svg";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { cartContext } from "../context/cartContext";
 
 const Product = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const { addToCart } = useContext(cartContext);
   return (
     <>

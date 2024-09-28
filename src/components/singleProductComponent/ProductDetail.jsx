@@ -14,7 +14,7 @@ import four from "/public/img/shop.png";
 import five from "/public/img/shop5.png";
 
 const ProductDetail = () => {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(1);
   const param = useParams().productId;
   const product = productsData.find((item) => item.id == param);
   const { addToCart } = useContext(cartContext);
