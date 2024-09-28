@@ -12,7 +12,7 @@ const ContextProvider = ({ children }) => {
     localStorage.setItem("productData", JSON.stringify(products));
   };
 
-  const addToCart = (data) => {
+  const addToCart = (data, mode) => {
     let productSavedData =
       JSON.parse(localStorage.getItem("productData")) || [];
 
@@ -22,9 +22,12 @@ const ContextProvider = ({ children }) => {
 
     if (prevProductIndex === -1) {
       productSavedData = [...productSavedData, data];
-    } else {
+    } else if (mode == "decrease") {
+      productSavedData[prevProductIndex].count -= 1;
+    } else if (mode == "increase") {
       productSavedData[prevProductIndex].count += 1;
     }
+
     setToLocalStorage(productSavedData);
     setCartData(productSavedData);
   };

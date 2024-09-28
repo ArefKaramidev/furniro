@@ -14,14 +14,24 @@ import four from "/public/img/shop.png";
 import five from "/public/img/shop5.png";
 
 const ProductDetail = () => {
-  const [count, setCount] = useState(1);
+  const [count, setCount] = useState(0);
   const param = useParams().productId;
   const product = productsData.find((item) => item.id == param);
-  const { addToCart } = useContext(cartContext);
+  const { addToCart, removeCartItem } = useContext(cartContext);
 
-  const plusCount = (obj) => {
+  const increase = (obj) => {
     setCount(count + 1);
-    addToCart(obj);
+    addToCart(obj, "increase");
+  };
+
+  const decrease = (obj) => {
+    if (count === 1) {
+      setCount(0)
+      removeCartItem(obj.id);
+    } else {
+      setCount(count - 1);
+      addToCart(obj, "decrease");
+    }
   };
 
   return (
@@ -78,7 +88,7 @@ const ProductDetail = () => {
             <div className="flex items-center justify-between border-2 rounded-xl w-32">
               <button
                 className="py-4 px-4 rounded-tl-md rounded-bl-md"
-                onClick={() => setCount(count - 1)}
+                onClick={() => decrease(product)}
               >
                 -
               </button>
@@ -88,7 +98,7 @@ const ProductDetail = () => {
               <button
                 className="px-4 py-4 rounded-tr-md rounded-br-md"
                 onClick={() => {
-                  plusCount(product);
+                  increase(product);
                 }}
               >
                 +
@@ -96,7 +106,7 @@ const ProductDetail = () => {
             </div>
             <button
               className="px-16 py-4 border-black border rounded-xl font-medium text-xl hover:bg-black hover:text-white active:scale-95 duration-150"
-              onClick={() => addToCart(product)}
+              onClick={() => increase(product)}
             >
               Add To Cart
             </button>

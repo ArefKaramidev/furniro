@@ -8,7 +8,7 @@ const MainCart = () => {
 
   return (
     <>
-      <div className="flex flex-col w-full items-center my-20 xl:flex-row xl:justify-evenly">
+      <div className="flex flex-col w-full items-center my-20 xl:flex-row xl:justify-evenly ">
         <div className="overflow-x-scroll w-full lg:overflow-x-hidden mb-10 lg:mb-0">
           <table
             border={0}

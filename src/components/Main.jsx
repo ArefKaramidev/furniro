@@ -8,7 +8,13 @@ const Main = () => {
   return (
     <>
       <div className="relative">
-        <img src={bg} alt="" className="w-full h-full mb-10" />
+        <img
+          src={bg}
+          alt=""
+          className="w-full h-full mb-10"
+          width={1920}
+          height={1080}
+        />
         <div className="bg-seconday pb-8 pt-8 w-full h-full top-44 right-10 px-10 xl:absolute xl:w-[693px] xl:h-[443px]">
           <span className="font-bold text-lg tracking-[5px] block mt-8">
             New Arrival
