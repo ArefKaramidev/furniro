@@ -1,7 +1,7 @@
 import { useParams } from "react-router";
 import { productsData } from "../../data/productsData";
 import { NavLink } from "react-router-dom";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import stars from "../../assets/icons/stars..svg";
 import facebook from "../../assets/icons/facebook.svg";
 import linkedIn from "../../assets/icons/linkedin.svg";
@@ -14,6 +14,9 @@ import four from "/public/img/shop.png";
 import five from "/public/img/shop5.png";
 
 const ProductDetail = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const [count, setCount] = useState(1);
   const param = useParams().productId;
   const product = productsData.find((item) => item.id == param);
