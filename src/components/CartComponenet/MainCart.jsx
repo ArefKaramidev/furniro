@@ -9,42 +9,45 @@ const MainCart = () => {
   return (
     <>
       <div className="flex flex-col w-full items-center my-20 xl:flex-row xl:justify-evenly">
-        <div className="overflow-x-auto w-full lg:overflow-x-hidden mb-10 lg:mb-0">
+        <div className="overflow-x-scroll w-full lg:overflow-x-hidden mb-10 lg:mb-0">
           <table
             border={0}
-            className="text-left mt-5 border-spacing-y-8 border-separate border-spacing-x-20 w-full xl:w-auto"
+            className="text-left mt-5 border-spacing-y-8 border-separate space-y-5  overflow-x-scroll w-full xl:w-auto"
           >
             <thead>
               <tr>
-                <th></th>
-                <th>Product</th>
-                <th>Price</th>
-                <th>Quantity</th>
-                <th>Subtotal</th>
+                <th className="px-20"></th>
+                <th className="px-20">Product</th>
+                <th className="px-20">Price</th>
+                <th className="px-20">Quantity</th>
+                <th className="px-20">Subtotal</th>
+                <th className="px-20"></th>
               </tr>
             </thead>
             <tbody>
               {cartData.map((item) => (
                 <tr key={item.id}>
-                  <td className="">
+                  <td>
                     <img
                       src={item.image}
                       alt=""
                       className="w-32 h-32 rounded-md"
                     />
                   </td>
-                  <td className="font-medium text-gray-400">{item.title}</td>
-                  <td className="text-gray-400 font-normal">
+                  <td className="font-medium text-gray-400 px-20">
+                    {item.title}
+                  </td>
+                  <td className="text-gray-400 font-normal px-20">
                     Rs. {item.price}
                   </td>
-                  <td>
+                  <td className="px-20">
                     <input
                       type="text"
                       value={item.count}
                       className="text-center border border-gray-400 rounded-md w-10 h-10 py-2"
                     />
                   </td>
-                  <td>Rs .{item.price}</td>
+                  <td className="px-20">Rs .{item.price}</td>
                   <td>
                     <button
                       onClick={() => {
