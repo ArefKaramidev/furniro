@@ -17,7 +17,7 @@ const ProductDetail = () => {
   const [count, setCount] = useState(0);
   const param = useParams().productId;
   const product = productsData.find((item) => item.id == param);
-  const { addToCart, removeCartItem } = useContext(cartContext);
+  const { addToCart } = useContext(cartContext);
 
   const increase = (obj) => {
     setCount(count + 1);
@@ -25,9 +25,8 @@ const ProductDetail = () => {
   };
 
   const decrease = (obj) => {
-    if (count === 1) {
-      setCount(0)
-      removeCartItem(obj.id);
+    if (count == 1) {
+      setCount(1);
     } else {
       setCount(count - 1);
       addToCart(obj, "decrease");
