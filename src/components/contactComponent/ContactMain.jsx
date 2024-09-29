@@ -23,7 +23,7 @@ const ContactMain = () => {
                 alt="location logo"
                 width={25}
                 height={25}
-                className="w-full"
+                className="w-5"
               />
               <span className="font-medium text-xl px-4">Address</span>
             </div>
@@ -38,7 +38,7 @@ const ContactMain = () => {
                 alt="phone logo"
                 width={25}
                 height={25}
-                className="w-full"
+                className="w-5"
               />
               <span className="font-medium text-xl px-4">Phone</span>
             </div>
@@ -54,7 +54,7 @@ const ContactMain = () => {
                 alt="watch logo"
                 width={25}
                 height={25}
-                className="w-full"
+                className="w-5"
               />
               <span className="font-medium text-xl px-4">Working Time</span>
             </div>

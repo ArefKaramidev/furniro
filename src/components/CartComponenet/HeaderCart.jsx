@@ -11,6 +11,7 @@ const HeaderCart = () => {
             className="w-full"
             width={800}
             height={300}
+            loading="eager"
           />
           <div className="absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center">
             <span className="font-bold text-3xl lg:text-5xl">Cart</span>

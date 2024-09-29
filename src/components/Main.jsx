@@ -14,6 +14,7 @@ const Main = () => {
           className="w-full h-full mb-10"
           width={1920}
           height={1080}
+          loading="eager"
         />
         <div className="bg-seconday w-full h-full top-44 right-10 p-10 xl:absolute xl:w-[693px] xl:h-[463px]">
           <span className="font-bold text-lg tracking-[5px] block mt-8">

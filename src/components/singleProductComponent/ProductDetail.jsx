@@ -43,69 +43,73 @@ const ProductDetail = () => {
   return (
     <>
       <div className="flex flex-col justify-evenly w-full px-10 mt-10 items-center gap-y-20 lg:flex-row lg:items-start lg:px-0">
-        {Slide && (
-          <div className="flex flex-col-reverse items-center lg:space-x-10 lg:flex-row lg:items-start">
-            <div className="flex items-center justify-center gap-x-4 mt-10 lg:mt-0 lg:flex-col lg:space-y-10 lg:items-start">
-              <img
-                src={first}
-                alt="first product image"
-                width={50}
-                height={50}
-                className="w-20 h-20 rounded-md cursor-pointer"
-                onClick={() => {
-                  setSlide(first);
-                  focusStyle(first);
-                }}
-                style={{
-                  border: focus === first ? "solid 2px #B88E2F" : "none",
-                }}
-              />
+        <div className="flex flex-col-reverse items-center lg:space-x-10 lg:flex-row lg:items-start">
+          <div className="flex items-center justify-center gap-x-4 mt-10 lg:mt-0 lg:flex-col lg:space-y-10 lg:items-start">
+            <img
+              loading="lazy"
+              src={first}
+              alt="first product image"
+              width={50}
+              height={50}
+              className="w-20 h-20 rounded-md cursor-pointer"
+              onClick={() => {
+                setSlide(first);
+                focusStyle(first);
+              }}
+              style={{
+                border: focus === first ? "solid 2px #B88E2F" : "none",
+              }}
+            />
 
-              <img
-                src={second}
-                alt="second product image"
-                width={50}
-                height={50}
-                className="w-20 h-20 rounded-md cursor-pointer"
-                onClick={() => {
-                  setSlide(second);
-                  focusStyle(second);
-                }}
-                style={{
-                  border: focus === second ? "solid 2px #B88E2F" : "none",
-                }}
-              />
+            <img
+              loading="lazy"
+              src={second}
+              alt="second product image"
+              width={50}
+              height={50}
+              className="w-20 h-20 rounded-md cursor-pointer"
+              onClick={() => {
+                setSlide(second);
+                focusStyle(second);
+              }}
+              style={{
+                border: focus === second ? "solid 2px #B88E2F" : "none",
+              }}
+            />
 
-              <img
-                src={third}
-                alt="third product image"
-                width={50}
-                height={50}
-                className="w-20 h-20 rounded-md cursor-pointer"
-                onClick={() => {
-                  setSlide(third);
-                  focusStyle(third);
-                }}
-                style={{
-                  border: focus === third ? "solid 2px #B88E2F" : "none",
-                }}
-              />
+            <img
+              loading="lazy"
+              src={third}
+              alt="third product image"
+              width={50}
+              height={50}
+              className="w-20 h-20 rounded-md cursor-pointer"
+              onClick={() => {
+                setSlide(third);
+                focusStyle(third);
+              }}
+              style={{
+                border: focus === third ? "solid 2px #B88E2F" : "none",
+              }}
+            />
 
-              <img
-                src={four}
-                alt="four product image"
-                width={50}
-                height={50}
-                className="w-20 h-20 rounded-md cursor-pointer"
-                onClick={() => {
-                  setSlide(four);
-                  focusStyle(four);
-                }}
-                style={{
-                  border: focus === four ? "solid 2px #B88E2F" : "none",
-                }}
-              />
-            </div>
+            <img
+              loading="lazy"
+              src={four}
+              alt="four product image"
+              width={50}
+              height={50}
+              className="w-20 h-20 rounded-md cursor-pointer"
+              onClick={() => {
+                setSlide(four);
+                focusStyle(four);
+              }}
+              style={{
+                border: focus === four ? "solid 2px #B88E2F" : "none",
+              }}
+            />
+          </div>
+          {slide && (
             <div>
               <img
                 src={slide}
@@ -115,10 +119,11 @@ const ProductDetail = () => {
                 height={400}
               />
             </div>
+          )}
 
-            {/* --------------------- */}
-          </div>
-        )}
+          {/* --------------------- */}
+        </div>
+
         <div className="flex flex-col gap-5 items-center lg:items-start">
           <span className="text-4xl font-medium">{product.title}</span>
           <span className="text-3xl font-medium text-gray-400">
@@ -172,7 +177,6 @@ const ProductDetail = () => {
                 className="font-medium text-xl border-none outline-none bg-transparent w-10 text-center"
                 ref={inputCount}
                 defaultValue={count}
-                
                 min={1}
                 max={50}
               />
