@@ -28,14 +28,14 @@ const ProductDetail = () => {
   const [slide, setSlide] = useState(five);
 
   const addProductHandler = (obj) => {
-    if (inputCount.current.value == "") {
+    if (inputCount.current.value == 1) {
       obj.count += 1;
       addToCart(obj);
     } else {
       obj.count = +inputCount.current.value;
       addToCart(obj);
     }
-    inputCount.current.value = "";
+    inputCount.current.value = 1;
   };
   const focusStyle = (img) => {
     setFocus(img);
@@ -171,7 +171,10 @@ const ProductDetail = () => {
                 type="text"
                 className="font-medium text-xl border-none outline-none bg-transparent w-10 text-center"
                 ref={inputCount}
-                defaultValue={1}
+                defaultValue={count}
+                
+                min={1}
+                max={50}
               />
               <button
                 className="px-4 py-4 rounded-tr-md rounded-br-md"

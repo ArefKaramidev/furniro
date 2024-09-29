@@ -9,6 +9,7 @@ const HeaderShop = () => {
       <header className="mb-8">
         <div className="relative flex items-center justify-center">
           <img
+            loading="lazy"
             src={headerShop}
             alt="headerShop"
             className="w-full"
