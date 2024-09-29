@@ -10,8 +10,9 @@ import { cartContext } from "../../context/cartContext";
 import first from "/public/img/sofaSlide2.webp";
 import second from "../../../public/img/deskSlid1.webp";
 import third from "/public/img/sofaSlide3.webp";
-import four from "../../../public/img/deskSlide2.webp";
-import five from "/public/img/shop5.png";
+import fourth from "../../../public/img/deskSlide2.webp";
+import fivth from "/public/img/shop5.png";
+import Slider from "./Slide";
 
 const ProductDetail = () => {
   const preloadImage = (src) => {
@@ -21,8 +22,8 @@ const ProductDetail = () => {
   useEffect(() => {
     preloadImage(first);
     preloadImage(second);
-    preloadImage(four);
-    preloadImage(five);
+    preloadImage(fourth);
+    preloadImage(fivth);
   }, []);
 
   const inputCount = useRef();
@@ -31,7 +32,7 @@ const ProductDetail = () => {
   const param = useParams().productId;
   const product = productsData.find((item) => item.id == param);
   const { addToCart } = useContext(cartContext);
-  const [slide, setSlide] = useState(five);
+  const [slide, setSlide] = useState(fivth);
 
   useEffect(() => {
     inputCount.current.value = count;
@@ -60,77 +61,16 @@ const ProductDetail = () => {
     inputCount.current.value = count;
   };
 
-  const focusStyle = (img) => {
-    setFocus(img);
-  };
   return (
     <>
       <div className="flex flex-col justify-evenly w-full px-10 mt-10 items-center gap-y-20 lg:flex-row lg:items-start lg:px-0">
         <div className="flex flex-col-reverse items-center lg:space-x-10 lg:flex-row lg:items-start">
           <div className="flex items-center justify-center gap-x-4 mt-10 lg:mt-0 lg:flex-col lg:space-y-10 lg:items-start">
-            <img
-              loading="lazy"
-              src={first}
-              alt="first product image"
-              width={50}
-              height={50}
-              className="w-20 h-20 rounded-md cursor-pointer"
-              onClick={() => {
-                setSlide(first);
-                focusStyle(first);
-              }}
-              style={{
-                border: focus === first ? "solid 2px #B88E2F" : "none",
-              }}
-            />
-
-            <img
-              loading="lazy"
-              src={second}
-              alt="second product image"
-              width={50}
-              height={50}
-              className="w-20 h-20 rounded-md cursor-pointer"
-              onClick={() => {
-                setSlide(second);
-                focusStyle(second);
-              }}
-              style={{
-                border: focus === second ? "solid 2px #B88E2F" : "none",
-              }}
-            />
-
-            <img
-              loading="lazy"
-              src={third}
-              alt="third product image"
-              width={50}
-              height={50}
-              className="w-20 h-20 rounded-md cursor-pointer"
-              onClick={() => {
-                setSlide(third);
-                focusStyle(third);
-              }}
-              style={{
-                border: focus === third ? "solid 2px #B88E2F" : "none",
-              }}
-            />
-
-            <img
-              loading="lazy"
-              src={four}
-              alt="four product image"
-              width={50}
-              height={50}
-              className="w-20 h-20 rounded-md cursor-pointer"
-              onClick={() => {
-                setSlide(four);
-                focusStyle(four);
-              }}
-              style={{
-                border: focus === four ? "solid 2px #B88E2F" : "none",
-              }}
-            />
+            <Slider src={first} setFocus={setFocus} setSlide={setSlide} />
+            <Slider src={second} setFocus={setFocus} setSlide={setSlide} />
+            <Slider src={third} setFocus={setFocus} setSlide={setSlide} />
+            <Slider src={fourth} setFocus={setFocus} setSlide={setSlide} />
+            <Slider src={fivth} setFocus={setFocus} setSlide={setSlide} />
           </div>
           {slide && (
             <div>

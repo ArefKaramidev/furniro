@@ -12,7 +12,7 @@ const Main = () => {
           src={bg}
           alt="home page image"
           className="w-full mb-10"
-          width={1920}
+          width={1900}
           height={1080}
           loading="eager"
         />

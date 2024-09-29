@@ -17,15 +17,15 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="flex  justify-between items-center py-5 px-5 overflow-hidden lg:flex lg:px-16 lg:justify-between">
+      <div className="flex justify-between w-full h-20 items-center py-5 px-5 overflow-hidden lg:h-24 lg:flex lg:px-16 lg:justify-between">
         <NavLink to={"/"}>
           <div className="flex items-center gap-x-4">
             <img
               src={logo}
               alt="furniro logo"
-              width={50}
-              height={50}
-              className="w-full"
+              width={56}
+              height={56}
+              className="w-14"
             />
 
             <span className="font-bold text-3xl hidden lg:inline-block">
@@ -40,9 +40,9 @@ const Navbar = () => {
           <img
             src={profile}
             alt="profile"
-            className="w-8"
-            width={10}
-            height={10}
+            className="w-5 xl:w-8"
+            width={20}
+            height={20}
           />
           <button
             className="relative z-20"
@@ -52,8 +52,8 @@ const Navbar = () => {
           >
             <img
               src={isOpen ? closeCart : cart}
-              alt=""
-              className="w-full"
+              alt="cart logo"
+              className="w-5 xl:w-8"
               width={20}
               height={20}
             />
