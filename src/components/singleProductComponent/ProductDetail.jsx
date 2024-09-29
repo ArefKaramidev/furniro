@@ -46,7 +46,7 @@ const ProductDetail = () => {
         <div className="flex flex-col-reverse items-center lg:space-x-10 lg:flex-row lg:items-start">
           <div className="flex items-center justify-center gap-x-4 mt-10 lg:mt-0 lg:flex-col lg:space-y-10 lg:items-start">
             <img
-              loading="lazy"
+              loading="eager"
               src={first}
               alt="first product image"
               width={50}
@@ -62,7 +62,7 @@ const ProductDetail = () => {
             />
 
             <img
-              loading="lazy"
+              loading="eager"
               src={second}
               alt="second product image"
               width={50}
@@ -78,7 +78,7 @@ const ProductDetail = () => {
             />
 
             <img
-              loading="lazy"
+              loading="eager"
               src={third}
               alt="third product image"
               width={50}
@@ -94,7 +94,7 @@ const ProductDetail = () => {
             />
 
             <img
-              loading="lazy"
+              loading="eager"
               src={four}
               alt="four product image"
               width={50}
