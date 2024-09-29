@@ -48,7 +48,7 @@ const ProductDetail = () => {
             <div className="flex items-center justify-center gap-x-4 mt-10 lg:mt-0 lg:flex-col lg:space-y-10 lg:items-start">
               <img
                 src={first}
-                alt=""
+                alt="first product image"
                 width={50}
                 height={50}
                 className="w-20 h-20 rounded-md cursor-pointer"
@@ -63,7 +63,7 @@ const ProductDetail = () => {
 
               <img
                 src={second}
-                alt=""
+                alt="second product image"
                 width={50}
                 height={50}
                 className="w-20 h-20 rounded-md cursor-pointer"
@@ -78,7 +78,7 @@ const ProductDetail = () => {
 
               <img
                 src={third}
-                alt=""
+                alt="third product image"
                 width={50}
                 height={50}
                 className="w-20 h-20 rounded-md cursor-pointer"
@@ -93,7 +93,7 @@ const ProductDetail = () => {
 
               <img
                 src={four}
-                alt=""
+                alt="four product image"
                 width={50}
                 height={50}
                 className="w-20 h-20 rounded-md cursor-pointer"
@@ -109,7 +109,7 @@ const ProductDetail = () => {
             <div>
               <img
                 src={slide}
-                alt=""
+                alt="five product image"
                 className="w-[26rem] h-[20rem] rounded-md xl:w-[35rem] xl:h-[24rem]"
                 width={400}
                 height={400}
@@ -126,7 +126,13 @@ const ProductDetail = () => {
           </span>
           <div className="flex flex-col items-center lg:items-start gap-y-10">
             <div className=" flex items-center gap-x-8">
-              <img src={stars} alt="" className="w-32" width={60} height={30} />
+              <img
+                src={stars}
+                alt="stars"
+                className="w-32"
+                width={60}
+                height={30}
+              />
               <div className="w-8 h-[2px] bg-gray-400 rotate-90"></div>
               <span className="text-gray-300">5 Customer Review</span>
             </div>
@@ -202,21 +208,21 @@ const ProductDetail = () => {
               <div className="flex items-center gap-x-2 mt-1">
                 <img
                   src={facebook}
-                  alt=""
+                  alt="facebook logo"
                   className="w-5 h-5"
                   width={10}
                   height={10}
                 />
                 <img
                   src={linkedIn}
-                  alt=""
+                  alt="linkedIn logo"
                   className="w-5 h-5"
                   width={10}
                   height={10}
                 />
                 <img
                   src={twitter}
-                  alt=""
+                  alt="twitter logo"
                   className="w-5 h-5"
                   width={10}
                   height={10}

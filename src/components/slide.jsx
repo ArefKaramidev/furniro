@@ -22,7 +22,7 @@ const Slide = () => {
         <div className=" flex items-center relative z-10">
           <img
             src={slide1}
-            alt=""
+            alt="image slide 1"
             className="hidden lg:inline-block w-full"
             width={100}
             height={300}
@@ -31,7 +31,7 @@ const Slide = () => {
             <div>
               <img
                 src={select}
-                alt=""
+                alt="selected slide"
                 className="hidden lg:inline-block w-full"
                 width={20}
                 height={20}
@@ -43,14 +43,14 @@ const Slide = () => {
           </div>
           <img
             src={slide2}
-            alt=""
+            alt="image slide 2"
             className="hidden lg:inline-block px-4 w-full"
             width={100}
             height={300}
           />
           <img
             src={slide3}
-            alt=""
+            alt="image slide 3"
             className="hidden lg:inline-block w-full"
             width={100}
             height={300}

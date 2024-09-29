@@ -10,7 +10,7 @@ const HeaderShop = () => {
         <div className="relative flex items-center justify-center">
           <img
             src={headerShop}
-            alt=""
+            alt="headerShop"
             className="w-full"
             width={800}
             height={300}
@@ -29,7 +29,7 @@ const HeaderShop = () => {
             <div className="flex items-center justify-center gap-x-4">
               <img
                 src={filter}
-                alt=""
+                alt="filter logo"
                 className="w-full"
                 width={20}
                 height={20}
@@ -37,14 +37,14 @@ const HeaderShop = () => {
               <span className="font-medium">Filter</span>
               <img
                 src={menu}
-                alt=""
+                alt="menu logo"
                 className="w-full"
                 width={20}
                 height={20}
               />
               <img
                 src={list}
-                alt=""
+                alt="list"
                 className="w-full"
                 width={20}
                 height={20}

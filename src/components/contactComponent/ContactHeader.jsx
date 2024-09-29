@@ -7,7 +7,7 @@ const ContactHeader = () => {
         <div className="relative flex items-center justify-center">
           <img
             src={contactHeader}
-            alt=""
+            alt="contact header"
             className="w-full"
             width={800}
             height={300}

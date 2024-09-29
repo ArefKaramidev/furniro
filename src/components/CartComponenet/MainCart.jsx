@@ -30,7 +30,7 @@ const MainCart = () => {
                   <td className="w-20">
                     <img
                       src={item.image}
-                      alt=""
+                      alt={item.title}
                       className="w-32 h-32 rounded-md"
                       width={200}
                       height={200}
@@ -56,7 +56,7 @@ const MainCart = () => {
                     >
                       <img
                         src={trash}
-                        alt=""
+                        alt='remove from cart'
                         className="w-full"
                         width={20}
                         height={20}

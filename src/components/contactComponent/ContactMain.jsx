@@ -20,7 +20,7 @@ const ContactMain = () => {
             <div className="flex items-center">
               <img
                 src={location}
-                alt=""
+                alt="location logo"
                 width={25}
                 height={25}
                 className="w-full"
@@ -35,7 +35,7 @@ const ContactMain = () => {
             <div className="flex items-center">
               <img
                 src={phone}
-                alt=""
+                alt="phone logo"
                 width={25}
                 height={25}
                 className="w-full"
@@ -51,7 +51,7 @@ const ContactMain = () => {
             <div className="flex items-center">
               <img
                 src={watch}
-                alt=""
+                alt="watch logo"
                 width={25}
                 height={25}
                 className="w-full"

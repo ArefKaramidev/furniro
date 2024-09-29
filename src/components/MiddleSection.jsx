@@ -36,7 +36,7 @@ const MiddleSection = () => {
           <div className=" text-center">
             <img
               src={image1}
-              alt=""
+              alt="image slide 1"
               className="mb-4 w-full"
               width={100}
               height={300}
@@ -48,7 +48,7 @@ const MiddleSection = () => {
           <div className=" text-center">
             <img
               src={image2}
-              alt=""
+              alt="image slide 2"
               className="mb-4 w-full"
               width={100}
               height={300}
@@ -60,7 +60,7 @@ const MiddleSection = () => {
           <div className=" text-center">
             <img
               src={image3}
-              alt=""
+               alt="image slide 3"
               className="mb-4 w-full"
               width={100}
               height={300}

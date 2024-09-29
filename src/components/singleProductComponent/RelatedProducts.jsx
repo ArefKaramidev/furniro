@@ -38,9 +38,9 @@ const RelatedProducts = () => {
                     Add to cart
                   </button>
                   <div className="flex flex-wrap justify-center items-center mt-4">
-                    <img src={share} alt="" />
-                    <img src={compair} alt="" className="px-4" />
-                    <img src={likeProduct} alt="" />
+                    <img src={share} alt="share" />
+                    <img src={compair} alt="compaire" className="px-4" />
+                    <img src={likeProduct} alt="likeProduct" />
                   </div>
                 </div>
               </div>

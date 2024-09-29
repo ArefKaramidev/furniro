@@ -7,7 +7,7 @@ const HeaderCart = () => {
         <div className="relative flex items-center justify-center">
           <img
             src={headerCart}
-            alt=""
+            alt="header cart"
             className="w-full"
             width={800}
             height={300}

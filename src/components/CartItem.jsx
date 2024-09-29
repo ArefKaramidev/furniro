@@ -11,7 +11,7 @@ const CartItem = () => {
         <div key={item.id} className="flex items-center justify-between px-10">
           <img
             src={item.image}
-            alt=""
+            alt="paroduct image"
             className="w-20 h-20 rounded-md"
             width={800}
             height={350}
@@ -26,7 +26,7 @@ const CartItem = () => {
           <button onClick={() => removeCartItem(item.id)}>
             <img
               src={remove}
-              alt=""
+              alt="delete"
               width={20}
               height={20}
               className="w-full"

@@ -10,7 +10,7 @@ const Main = () => {
       <div className="relative">
         <img
           src={bg}
-          alt=""
+          alt="home page image"
           className="w-full h-full mb-10"
           width={1920}
           height={1080}

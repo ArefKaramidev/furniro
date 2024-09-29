@@ -5,7 +5,7 @@ const CheckoutHeader = () => {
     <>
       <header className="mb-8">
         <div className="relative flex items-center justify-center">
-          <img src={checkout} alt="" className="w-full" width={800} height={300} />
+          <img src={checkout} alt="check out header" className="w-full" width={800} height={300} />
           <div className="absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center">
             <span className="font-bold text-3xl lg:text-5xl">Checkout</span>
             <div className="flex items-center justify-center space-x-2 mt-4">
