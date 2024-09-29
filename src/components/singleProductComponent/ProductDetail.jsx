@@ -14,6 +14,10 @@ import four from "../../../public/img/deskSlide2.webp";
 import five from "/public/img/shop5.png";
 
 const ProductDetail = () => {
+  const preloadImage = (src) => {
+    const img = new Image();
+    img.src = src;
+  };
   useEffect(() => {
     window.scrollTo(0, 0);
     preloadImage(first);
@@ -29,11 +33,6 @@ const ProductDetail = () => {
   const product = productsData.find((item) => item.id == param);
   const { addToCart } = useContext(cartContext);
   const [slide, setSlide] = useState(five);
-
-  const preloadImage = (src) => {
-    const img = new Image();
-    img.src = src;
-  };
 
   useEffect(() => {
     inputCount.current.value = count;
@@ -192,14 +191,14 @@ const ProductDetail = () => {
           <div className="flex flex-col gap-y-10 items-center gap-x-3 border-b pb-20 lg:flex-row lg:gap-y-00">
             <div className="flex items-center justify-between border-2 rounded-xl w-32">
               <button
-                className="py-4 px-4 rounded-tl-md rounded-bl-md"
+                className="py-4 px-4 rounded-tl-md rounded-bl-md "
                 onClick={() => countHandler("min")}
               >
                 -
               </button>
               <input
-                type="text"
-                className="font-medium text-xl border-none outline-none bg-transparent w-10 text-center"
+                type="number"
+                className="font-medium text-xl border-none outline-none bg-transparent left-1 w-32 text-center"
                 ref={inputCount}
                 min={1}
                 defaultValue={count}
