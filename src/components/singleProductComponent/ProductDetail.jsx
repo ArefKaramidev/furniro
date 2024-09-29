@@ -12,7 +12,6 @@ import second from "/public/img/pink-sofa-white-living-room-with-copy-space.jpg"
 import third from "/public/img/wood-sideboard-living-room-interior-with-copy-space.jpg";
 import four from "/public/img/wood-sideboard-living-room-interior-with-copy-space (1).jpg";
 import five from "/public/img/shop5.png";
-import Slide from "../slide";
 
 const ProductDetail = () => {
   useEffect(() => {
@@ -46,7 +45,7 @@ const ProductDetail = () => {
         <div className="flex flex-col-reverse items-center lg:space-x-10 lg:flex-row lg:items-start">
           <div className="flex items-center justify-center gap-x-4 mt-10 lg:mt-0 lg:flex-col lg:space-y-10 lg:items-start">
             <img
-              loading="eager"
+              loading="lazy"
               src={first}
               alt="first product image"
               width={50}
@@ -62,7 +61,7 @@ const ProductDetail = () => {
             />
 
             <img
-              loading="eager"
+              loading="lazy"
               src={second}
               alt="second product image"
               width={50}
@@ -78,7 +77,7 @@ const ProductDetail = () => {
             />
 
             <img
-              loading="eager"
+              loading="lazy"
               src={third}
               alt="third product image"
               width={50}
@@ -94,7 +93,7 @@ const ProductDetail = () => {
             />
 
             <img
-              loading="eager"
+              loading="lazy"
               src={four}
               alt="four product image"
               width={50}
