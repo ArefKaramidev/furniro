@@ -1,4 +1,4 @@
-import bg from "../../public/img/bgHome.jpg";
+import bg from "../../public/img/bgHome.webp";
 import MiddleSection from "./MiddleSection";
 import Slide from "./slide";
 import FuniroFurnitureSection from "./FuniroFurnitureSection";

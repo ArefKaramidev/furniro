@@ -7,10 +7,10 @@ import facebook from "../../assets/icons/facebook.svg";
 import linkedIn from "../../assets/icons/linkedin.svg";
 import twitter from "../../assets/icons/twitter.svg";
 import { cartContext } from "../../context/cartContext";
-import first from "/public/img/deskSlide1.jpg";
-import second from "../../../public/img/deskSlid2.jpg";
-import third from "/public/img/sofaSlide3.jpg";
-import four from "../../../public/img/sofaSlide4.jpg";
+import first from "/public/img/sofaSlide2.webp";
+import second from "../../../public/img/deskSlid1.webp";
+import third from "/public/img/sofaSlide3.webp";
+import four from "../../../public/img/deskSlide2.webp";
 import five from "/public/img/shop5.png";
 
 const ProductDetail = () => {
@@ -44,7 +44,7 @@ const ProductDetail = () => {
       if (mode === "max") {
         return prevCount + 1;
       } else {
-        return prevCount > 1 ? prevCount - 1 : prevCount; // Prevent count going below 1
+        return prevCount > 1 ? prevCount - 1 : prevCount;
       }
     });
     inputCount.current.value = count;
@@ -204,6 +204,13 @@ const ProductDetail = () => {
                 min={1}
                 defaultValue={count}
                 max={50}
+                minLength={1}
+                maxLength={2}
+                onInput={(e) => {
+                  e.target.value < 1
+                    ? (e.target.value = 1)
+                    : console.log("aref");
+                }}
               />
               <button
                 className="px-4 py-4 rounded-tr-md rounded-br-md"
