@@ -5,7 +5,7 @@ export const productsData = [
     image: "/img/image 1.png",
     des: "Stylish cafe chair",
     price: " 2500000",
-    count: 1,
+    count: 0,
   },
   {
     id: 2,
@@ -13,7 +13,7 @@ export const productsData = [
     image: "/img/Images (3).png",
     des: "Stylish cafe chair",
     price: 2500000,
-    count: 1,
+    count: 0,
   },
   {
     id: 3,
@@ -21,7 +21,7 @@ export const productsData = [
     image: "/img/image 3.png",
     des: "Luxury big sofa",
     price: 7000.0,
-    count: 1,
+    count: 0,
   },
   {
     id: 4,
@@ -29,15 +29,15 @@ export const productsData = [
     image: "/img/image 4.png",
     des: "Outdoor bar table and stool",
     price: 500.0,
-    count: 1,
+    count: 0,
   },
   {
     id: 5,
     title: "Grifo",
-    image: "/img/Images (1).png",
+    image: "/img/Images (0).png",
     des: "Night lamp",
     price: 1500.0,
-    count: 1,
+    count: 0,
   },
   {
     id: 6,
@@ -45,7 +45,7 @@ export const productsData = [
     image: "/img/image 6.png",
     des: "Small mug",
     price: 15000000,
-    count: 1,
+    count: 0,
   },
   {
     id: 7,
@@ -53,7 +53,7 @@ export const productsData = [
     image: "/img/image 7.png",
     des: "Cute bed set",
     price: 7000000,
-    count: 1,
+    count: 0,
   },
   {
     id: 8,
@@ -61,7 +61,7 @@ export const productsData = [
     image: "/img/Images (2).png",
     des: "Minimalist flower pot",
     price: 500000,
-    count: 1,
+    count: 0,
   },
   {
     id: 9,
@@ -69,7 +69,7 @@ export const productsData = [
     image: "/img/image 1.png",
     des: "Stylish cafe chair",
     price: 2500000,
-    count: 1,
+    count: 0,
   },
   {
     id: 10,
@@ -77,7 +77,7 @@ export const productsData = [
     image: "/img/Images (3).png",
     des: "Stylish cafe chair",
     price: 2500000,
-    count: 1,
+    count: 0,
   },
   {
     id: 11,
@@ -85,7 +85,7 @@ export const productsData = [
     image: "/img/image 3.png",
     des: "Luxury big sofa",
     price: 7000000,
-    count: 1,
+    count: 0,
   },
   {
     id: 12,
@@ -93,7 +93,7 @@ export const productsData = [
     image: "/img/image 4.png",
     des: "Outdoor bar table and stool",
     price: 500000,
-    count: 1,
+    count: 0,
   },
   {
     id: 13,
@@ -101,7 +101,7 @@ export const productsData = [
     image: "/img/Images (1).png",
     des: "Night lamp",
     price: 15000,
-    count: 1,
+    count: 0,
   },
   {
     id: 14,
@@ -109,7 +109,7 @@ export const productsData = [
     image: "/img/image 6.png",
     des: "Small mug",
     price: 150000,
-    count: 1,
+    count: 0,
   },
   {
     id: 15,
@@ -117,7 +117,7 @@ export const productsData = [
     image: "/img/image 7.png",
     des: "Cute bed set",
     price: 7000000,
-    count: 1,
+    count: 0,
   },
   {
     id: 16,
@@ -125,6 +125,6 @@ export const productsData = [
     image: "/img/Images (2).png",
     des: "Minimalist flower pot",
     price: 500000,
-    count: 1,
+    count: 0,
   },
 ];

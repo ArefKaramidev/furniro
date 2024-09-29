@@ -1,4 +1,4 @@
-import bg from "/img/scandinavian-interior-mockup-wall-decal-background 1.png";
+import bg from "../../public/img/bgHome.jpg";
 import MiddleSection from "./MiddleSection";
 import Slide from "./slide";
 import FuniroFurnitureSection from "./FuniroFurnitureSection";

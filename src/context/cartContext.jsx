@@ -12,7 +12,7 @@ const ContextProvider = ({ children }) => {
     localStorage.setItem("productData", JSON.stringify(products));
   };
 
-  const addToCart = (data) => {
+  const addToCart = (data, count) => {
     let productSavedData =
       JSON.parse(localStorage.getItem("productData")) || [];
 
@@ -23,7 +23,7 @@ const ContextProvider = ({ children }) => {
     if (prevProductIndex === -1) {
       productSavedData = [...productSavedData, data];
     } else {
-      productSavedData[prevProductIndex].count = data.count;
+      productSavedData[prevProductIndex].count += count;
     }
     setToLocalStorage(productSavedData);
     setCartData(productSavedData);

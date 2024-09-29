@@ -23,7 +23,7 @@ const ProductDetail = () => {
   }, []);
 
   const inputCount = useRef();
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(1);
   const [focus, setFocus] = useState(null);
   const param = useParams().productId;
   const product = productsData.find((item) => item.id == param);
@@ -35,16 +35,33 @@ const ProductDetail = () => {
     img.src = src;
   };
 
+  useEffect(() => {
+    inputCount.current.value = count;
+  }, [count]);
+
+  const countHandler = (mode) => {
+    setCount((prevCount) => {
+      if (mode === "max") {
+        return prevCount + 1;
+      } else {
+        return prevCount > 1 ? prevCount - 1 : prevCount; // Prevent count going below 1
+      }
+    });
+    inputCount.current.value = count;
+  };
+
   const addProductHandler = (obj) => {
     if (inputCount.current.value == 1) {
       obj.count += 1;
-      addToCart(obj);
+      addToCart(obj, +inputCount.current.value);
     } else {
       obj.count = +inputCount.current.value;
-      addToCart(obj);
+      addToCart(obj, +inputCount.current.value);
     }
-    inputCount.current.value = 1;
+    setCount(1);
+    inputCount.current.value = count;
   };
+
   const focusStyle = (img) => {
     setFocus(img);
   };
@@ -176,7 +193,7 @@ const ProductDetail = () => {
             <div className="flex items-center justify-between border-2 rounded-xl w-32">
               <button
                 className="py-4 px-4 rounded-tl-md rounded-bl-md"
-                onClick={() => setCount(count - 1)}
+                onClick={() => countHandler("min")}
               >
                 -
               </button>
@@ -184,14 +201,14 @@ const ProductDetail = () => {
                 type="text"
                 className="font-medium text-xl border-none outline-none bg-transparent w-10 text-center"
                 ref={inputCount}
-                defaultValue={count}
                 min={1}
+                defaultValue={count}
                 max={50}
               />
               <button
                 className="px-4 py-4 rounded-tr-md rounded-br-md"
                 onClick={() => {
-                  setCount(count + 1);
+                  countHandler("max");
                 }}
               >
                 +
