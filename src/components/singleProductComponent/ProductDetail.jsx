@@ -7,10 +7,10 @@ import facebook from "../../assets/icons/facebook.svg";
 import linkedIn from "../../assets/icons/linkedin.svg";
 import twitter from "../../assets/icons/twitter.svg";
 import { cartContext } from "../../context/cartContext";
-import first from "/public/img/gray-sofa-white-living-room-interior-with-copy-space-3d-rendering.jpg";
-import second from "/public/img/pink-sofa-white-living-room-with-copy-space.jpg";
-import third from "/public/img/wood-sideboard-living-room-interior-with-copy-space.jpg";
-import four from "/public/img/wood-sideboard-living-room-interior-with-copy-space (1).jpg";
+import first from "/public/img/deskSlide1.jpg";
+import second from "../../../public/img/deskSlid2.jpg";
+import third from "/public/img/sofaSlide3.jpg";
+import four from "../../../public/img/sofaSlide4.jpg";
 import five from "/public/img/shop5.png";
 
 const ProductDetail = () => {
