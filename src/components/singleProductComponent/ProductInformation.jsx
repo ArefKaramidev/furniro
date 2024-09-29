@@ -29,8 +29,20 @@ const ProductInformation = () => {
         </span>
       </div>
       <div className="flex flex-col gap-y-5 px-5 items-center justify-evenly my-10 lg:flex-row lg:gap-y-0 lg:px-0">
-        <img src="/public/img/info.png" alt="" />
-        <img src="/public/img/info2.png" alt="" />
+        <img
+          src="/public/img/info.png"
+          alt=""
+          className="w-96"
+          width={450}
+          height={250}
+        />
+        <img
+          src="/public/img/info2.png"
+          alt=""
+          className="w-96"
+          width={450}
+          height={250}
+        />
       </div>
     </>
   );

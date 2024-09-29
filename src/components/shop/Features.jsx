@@ -8,7 +8,7 @@ const Features = () => {
     <>
       <div className="bg-seconday flex flex-col items-start justify-between gap-20 py-20 px-16 lg:flex-row lg:items-center lg:gap-0">
         <div className="flex items-center gap-2">
-          <img src={champion} alt="" />
+          <img src={champion} alt="" width={40} height={40} className="w-20" />
           <div className="flex flex-col">
             <span className="font-bold text-xl">High Quality</span>
             <span className="font-normal text-gray-400">
@@ -18,7 +18,7 @@ const Features = () => {
         </div>
 
         <div className="flex items-center gap-2">
-          <img src={nice} alt="" />
+          <img src={nice} alt="" width={40} height={40} className="w-20" />
           <div className="flex flex-col">
             <span className="font-bold text-xl">Warranty Protection</span>
             <span className="font-normal text-gray-400">Over 2 years</span>
@@ -26,7 +26,7 @@ const Features = () => {
         </div>
 
         <div className="flex items-center gap-2">
-          <img src={post} alt="" />
+          <img src={post} alt="" width={40} height={40} className="w-20" />
           <div className="flex flex-col">
             <span className="font-bold text-xl">Free Shipping</span>
             <span className="font-normal text-gray-400">Order over 150 $</span>
@@ -34,7 +34,13 @@ const Features = () => {
         </div>
 
         <div className="flex items-center gap-2">
-          <img src={operator} alt="" />
+          <img
+            src={operator}
+            alt=""
+            width={40}
+            height={40}
+            className="w-20"
+          />
           <div className="flex flex-col">
             <span className="font-bold text-xl">24 / 7 Support</span>
             <span className="font-normal text-gray-400">Dedicated support</span>

@@ -19,7 +19,9 @@ const Navbar = () => {
     <>
       <div className="flex  justify-between items-center py-5 px-5 overflow-hidden lg:flex lg:px-16 lg:justify-between">
         <div className="flex items-center gap-x-4">
-          <img src={logo} alt="" />
+          <NavLink to={"/"}>
+            <img src={logo} alt="" width={50} height={50} className="w-full" />
+          </NavLink>
           <span className="font-bold text-3xl hidden lg:inline-block">
             Furniro
           </span>
@@ -28,7 +30,7 @@ const Navbar = () => {
           <HeaderLinks />
         </div>
         <div className="flex items-center gap-x-5 lg:gap-x-10">
-          <img src={profile} alt="" className="hover:mb-2 duration-150" />
+          <img src={profile} alt="" className="w-8" width={10} height={10} />
           <button
             className="relative z-20"
             onClick={() => {
@@ -38,7 +40,9 @@ const Navbar = () => {
             <img
               src={isOpen ? closeCart : cart}
               alt=""
-              className="hover:mb-2 duration-150"
+              className="w-full"
+              width={20}
+              height={20}
             />
           </button>
           <div className="lg:hidden">

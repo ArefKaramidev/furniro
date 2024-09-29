@@ -32,6 +32,8 @@ const MainCart = () => {
                       src={item.image}
                       alt=""
                       className="w-32 h-32 rounded-md"
+                      width={200}
+                      height={200}
                     />
                   </td>
                   <td className="font-medium text-gray-400  ">{item.title}</td>
@@ -52,7 +54,13 @@ const MainCart = () => {
                         removeCartItem(item.id);
                       }}
                     >
-                      <img src={trash} alt="" />
+                      <img
+                        src={trash}
+                        alt=""
+                        className="w-full"
+                        width={20}
+                        height={20}
+                      />
                     </button>
                   </td>
                 </tr>

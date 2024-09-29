@@ -20,17 +20,41 @@ const Slide = () => {
           </button>
         </div>
         <div className=" flex items-center relative z-10">
-          <img src={slide1} alt="" className="hidden lg:inline-block" />
+          <img
+            src={slide1}
+            alt=""
+            className="hidden lg:inline-block w-full"
+            width={100}
+            height={300}
+          />
           <div className="hidden items-center absolute bottom-0 right-56 lg:flex">
             <div>
-              <img src={select} alt="" className="hidden lg:inline-block" />
+              <img
+                src={select}
+                alt=""
+                className="hidden lg:inline-block w-full"
+                width={20}
+                height={20}
+              />
             </div>
             <div className="w-3 h-3 rounded-full bg-gray-300 ml-3 "></div>
             <div className="w-3 h-3 rounded-full bg-gray-300 ml-3 "></div>
             <div className="w-3 h-3 rounded-full bg-gray-300 ml-3 "></div>
           </div>
-          <img src={slide2} alt="" className="hidden lg:inline-block px-4" />
-          <img src={slide3} alt="" className="hidden lg:inline-block" />
+          <img
+            src={slide2}
+            alt=""
+            className="hidden lg:inline-block px-4 w-full"
+            width={100}
+            height={300}
+          />
+          <img
+            src={slide3}
+            alt=""
+            className="hidden lg:inline-block w-full"
+            width={100}
+            height={300}
+          />
         </div>
       </div>
     </>

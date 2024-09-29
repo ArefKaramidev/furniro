@@ -9,7 +9,13 @@ const CartItem = () => {
     <>
       {cartData.map((item) => (
         <div key={item.id} className="flex items-center justify-between px-10">
-          <img src={item.image} alt="" className="w-20 h-20 rounded-md" />
+          <img
+            src={item.image}
+            alt=""
+            className="w-20 h-20 rounded-md"
+            width={800}
+            height={350}
+          />
           <div className="flex flex-col">
             <span>{item.title}</span>
             <div className="flex items-center gap-x-4">
@@ -18,7 +24,13 @@ const CartItem = () => {
             </div>
           </div>
           <button onClick={() => removeCartItem(item.id)}>
-            <img src={remove} alt="" />
+            <img
+              src={remove}
+              alt=""
+              width={20}
+              height={20}
+              className="w-full"
+            />
           </button>
         </div>
       ))}

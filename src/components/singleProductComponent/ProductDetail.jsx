@@ -12,6 +12,7 @@ import second from "/public/img/pink-sofa-white-living-room-with-copy-space.jpg"
 import third from "/public/img/wood-sideboard-living-room-interior-with-copy-space.jpg";
 import four from "/public/img/wood-sideboard-living-room-interior-with-copy-space (1).jpg";
 import five from "/public/img/shop5.png";
+import Slide from "../slide";
 
 const ProductDetail = () => {
   useEffect(() => {
@@ -20,17 +21,13 @@ const ProductDetail = () => {
 
   const inputCount = useRef();
   const [count, setCount] = useState(0);
-  const [slide, setSlide] = useState(five);
   const [focus, setFocus] = useState(null);
   const param = useParams().productId;
   const product = productsData.find((item) => item.id == param);
   const { addToCart } = useContext(cartContext);
-  const [addOneCount, setAddCount] = useState(false);
+  const [slide, setSlide] = useState(five);
 
   const addProductHandler = (obj) => {
-    // if (inputCount.current.value == "") {
-    //   setAddCount(true);
-    // }
     if (inputCount.current.value == "") {
       obj.count += 1;
       addToCart(obj);
@@ -46,80 +43,82 @@ const ProductDetail = () => {
   return (
     <>
       <div className="flex flex-col justify-evenly w-full px-10 mt-10 items-center gap-y-20 lg:flex-row lg:items-start lg:px-0">
-        <div className="flex flex-col-reverse items-center lg:space-x-10 lg:flex-row lg:items-start">
-          <div className="flex items-center justify-center gap-x-4 mt-10 lg:mt-0 lg:flex-col lg:space-y-10 lg:items-start">
-            <img
-              src={first}
-              alt=""
-              width={50}
-              height={50}
-              className="w-20 h-20 rounded-md cursor-pointer"
-              onClick={() => {
-                setSlide(first);
-                focusStyle(first);
-              }}
-              style={{
-                border: focus === first ? "solid 2px #B88E2F" : "none",
-              }}
-            />
+        {Slide && (
+          <div className="flex flex-col-reverse items-center lg:space-x-10 lg:flex-row lg:items-start">
+            <div className="flex items-center justify-center gap-x-4 mt-10 lg:mt-0 lg:flex-col lg:space-y-10 lg:items-start">
+              <img
+                src={first}
+                alt=""
+                width={50}
+                height={50}
+                className="w-20 h-20 rounded-md cursor-pointer"
+                onClick={() => {
+                  setSlide(first);
+                  focusStyle(first);
+                }}
+                style={{
+                  border: focus === first ? "solid 2px #B88E2F" : "none",
+                }}
+              />
 
-            <img
-              src={second}
-              alt=""
-              width={50}
-              height={50}
-              className="w-20 h-20 rounded-md cursor-pointer"
-              onClick={() => {
-                setSlide(second);
-                focusStyle(second);
-              }}
-              style={{
-                border: focus === second ? "solid 2px #B88E2F" : "none",
-              }}
-            />
+              <img
+                src={second}
+                alt=""
+                width={50}
+                height={50}
+                className="w-20 h-20 rounded-md cursor-pointer"
+                onClick={() => {
+                  setSlide(second);
+                  focusStyle(second);
+                }}
+                style={{
+                  border: focus === second ? "solid 2px #B88E2F" : "none",
+                }}
+              />
 
-            <img
-              src={third}
-              alt=""
-              width={50}
-              height={50}
-              className="w-20 h-20 rounded-md cursor-pointer"
-              onClick={() => {
-                setSlide(third);
-                focusStyle(third);
-              }}
-              style={{
-                border: focus === third ? "solid 2px #B88E2F" : "none",
-              }}
-            />
+              <img
+                src={third}
+                alt=""
+                width={50}
+                height={50}
+                className="w-20 h-20 rounded-md cursor-pointer"
+                onClick={() => {
+                  setSlide(third);
+                  focusStyle(third);
+                }}
+                style={{
+                  border: focus === third ? "solid 2px #B88E2F" : "none",
+                }}
+              />
 
-            <img
-              src={four}
-              alt=""
-              width={50}
-              height={50}
-              className="w-20 h-20 rounded-md cursor-pointer"
-              onClick={() => {
-                setSlide(four);
-                focusStyle(four);
-              }}
-              style={{
-                border: focus === four ? "solid 2px #B88E2F" : "none",
-              }}
-            />
+              <img
+                src={four}
+                alt=""
+                width={50}
+                height={50}
+                className="w-20 h-20 rounded-md cursor-pointer"
+                onClick={() => {
+                  setSlide(four);
+                  focusStyle(four);
+                }}
+                style={{
+                  border: focus === four ? "solid 2px #B88E2F" : "none",
+                }}
+              />
+            </div>
+            <div>
+              <img
+                src={slide}
+                alt=""
+                className="w-[26rem] h-[20rem] rounded-md xl:w-[35rem] xl:h-[24rem]"
+                width={400}
+                height={400}
+              />
+            </div>
+
+            {/* --------------------- */}
           </div>
-          <div>
-            <img
-              src={slide}
-              alt=""
-              className="w-[26rem] h-[20rem] rounded-md xl:w-[35rem] xl:h-[24rem]"
-              width={400}
-              height={400}
-            />
-          </div>
-
-          {/* --------------------- */}
-        </div>
+        )}
         <div className="flex flex-col gap-5 items-center lg:items-start">
           <span className="text-4xl font-medium">{product.title}</span>
           <span className="text-3xl font-medium text-gray-400">
@@ -127,7 +126,7 @@ const ProductDetail = () => {
           </span>
           <div className="flex flex-col items-center lg:items-start gap-y-10">
             <div className=" flex items-center gap-x-8">
-              <img src={stars} alt="" />
+              <img src={stars} alt="" className="w-32" width={60} height={30} />
               <div className="w-8 h-[2px] bg-gray-400 rotate-90"></div>
               <span className="text-gray-300">5 Customer Review</span>
             </div>
@@ -201,9 +200,27 @@ const ProductDetail = () => {
               <span className="text-gray-400">:Sofas</span>
               <span className="text-gray-400">:Sofa, Chair, Home, Shop</span>
               <div className="flex items-center gap-x-2 mt-1">
-                <img src={facebook} alt="" className="w-5 h-5" />
-                <img src={linkedIn} alt="" className="w-5 h-5" />
-                <img src={twitter} alt="" className="w-5 h-5" />
+                <img
+                  src={facebook}
+                  alt=""
+                  className="w-5 h-5"
+                  width={10}
+                  height={10}
+                />
+                <img
+                  src={linkedIn}
+                  alt=""
+                  className="w-5 h-5"
+                  width={10}
+                  height={10}
+                />
+                <img
+                  src={twitter}
+                  alt=""
+                  className="w-5 h-5"
+                  width={10}
+                  height={10}
+                />
               </div>
             </div>
           </div>

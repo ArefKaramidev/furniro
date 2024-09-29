@@ -8,7 +8,13 @@ const HeaderShop = () => {
     <>
       <header className="mb-8">
         <div className="relative flex items-center justify-center">
-          <img src={headerShop} alt="" className="w-full" />
+          <img
+            src={headerShop}
+            alt=""
+            className="w-full"
+            width={800}
+            height={300}
+          />
           <div className="absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center">
             <span className="font-bold text-3xl lg:text-5xl">Shop</span>
             <div className="flex items-center justify-center space-x-2 mt-4">
@@ -21,10 +27,28 @@ const HeaderShop = () => {
         <div className="bg-seconday h-24 flex justify-between items-center px-24">
           <div className="items-center gap-4 hidden lg:flex">
             <div className="flex items-center justify-center gap-x-4">
-              <img src={filter} alt="" />
+              <img
+                src={filter}
+                alt=""
+                className="w-full"
+                width={20}
+                height={20}
+              />
               <span className="font-medium">Filter</span>
-              <img src={menu} alt="" />
-              <img src={list} alt="" />
+              <img
+                src={menu}
+                alt=""
+                className="w-full"
+                width={20}
+                height={20}
+              />
+              <img
+                src={list}
+                alt=""
+                className="w-full"
+                width={20}
+                height={20}
+              />
             </div>
             <div className="flex items-center gap-x-2">
               <div className="w-8 h-[2px] bg-gray-400 rotate-90"></div>

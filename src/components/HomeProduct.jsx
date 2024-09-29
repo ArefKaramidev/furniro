@@ -45,7 +45,13 @@ const HomeProduct = () => {
               </div>
               {/* Product Image and Info */}
               <div>
-                <img src={item.image} alt={item.title} />
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  width={200}
+                  height={100}
+                  className="w-full"
+                />
                 <div className="flex flex-col items-start justify-between bg-[#F4F5F7] p-3">
                   <span className="font-bold text-xl">{item.title}</span>
                   <span className="text-[#B0B0B0]">{item.des}</span>

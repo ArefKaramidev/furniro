@@ -18,7 +18,13 @@ const ContactMain = () => {
         <div className="flex flex-col gap-y-12">
           <div className="flex flex-col justify-center">
             <div className="flex items-center">
-              <img src={location} alt="" />
+              <img
+                src={location}
+                alt=""
+                width={25}
+                height={25}
+                className="w-full"
+              />
               <span className="font-medium text-xl px-4">Address</span>
             </div>
             <p className="font-medium text-sm">
@@ -27,7 +33,13 @@ const ContactMain = () => {
           </div>
           <div className="flex flex-col justify-center">
             <div className="flex items-center">
-              <img src={phone} alt="" />
+              <img
+                src={phone}
+                alt=""
+                width={25}
+                height={25}
+                className="w-full"
+              />
               <span className="font-medium text-xl px-4">Phone</span>
             </div>
             <p className="font-medium text-sm">
@@ -37,7 +49,13 @@ const ContactMain = () => {
           </div>
           <div className="flex flex-col justify-center">
             <div className="flex items-center">
-              <img src={watch} alt="" />
+              <img
+                src={watch}
+                alt=""
+                width={25}
+                height={25}
+                className="w-full"
+              />
               <span className="font-medium text-xl px-4">Working Time</span>
             </div>
             <p className="font-medium text-sm">

@@ -34,19 +34,37 @@ const MiddleSection = () => {
       >
         <SwiperSlide>
           <div className=" text-center">
-            <img src={image1} alt="" className="mb-4" />
+            <img
+              src={image1}
+              alt=""
+              className="mb-4 w-full"
+              width={100}
+              height={300}
+            />
             <span className=" font-medium text-2xl">Dining</span>
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className=" text-center">
-            <img src={image2} alt="" className="mb-4" />
+            <img
+              src={image2}
+              alt=""
+              className="mb-4 w-full"
+              width={100}
+              height={300}
+            />
             <span className=" font-medium text-2xl">Living</span>
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className=" text-center">
-            <img src={image3} alt="" className="mb-4" />
+            <img
+              src={image3}
+              alt=""
+              className="mb-4 w-full"
+              width={100}
+              height={300}
+            />
             <span className=" font-medium text-2xl">Bedroom</span>{" "}
           </div>
         </SwiperSlide>

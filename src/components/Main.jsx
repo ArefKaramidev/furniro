@@ -15,7 +15,7 @@ const Main = () => {
           width={1920}
           height={1080}
         />
-        <div className="bg-seconday pb-8 pt-8 w-full h-full top-44 right-10 px-10 xl:absolute xl:w-[693px] xl:h-[463px]">
+        <div className="bg-seconday w-full h-full top-44 right-10 p-10 xl:absolute xl:w-[693px] xl:h-[463px]">
           <span className="font-bold text-lg tracking-[5px] block mt-8">
             New Arrival
           </span>
