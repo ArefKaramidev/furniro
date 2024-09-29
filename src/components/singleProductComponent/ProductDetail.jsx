@@ -16,6 +16,10 @@ import five from "/public/img/shop5.png";
 const ProductDetail = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
+    preloadImage(first);
+    preloadImage(second);
+    preloadImage(four);
+    preloadImage(five);
   }, []);
 
   const inputCount = useRef();
@@ -25,6 +29,11 @@ const ProductDetail = () => {
   const product = productsData.find((item) => item.id == param);
   const { addToCart } = useContext(cartContext);
   const [slide, setSlide] = useState(five);
+
+  const preloadImage = (src) => {
+    const img = new Image();
+    img.src = src;
+  };
 
   const addProductHandler = (obj) => {
     if (inputCount.current.value == 1) {
