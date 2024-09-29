@@ -18,19 +18,32 @@ const Navbar = () => {
   return (
     <>
       <div className="flex  justify-between items-center py-5 px-5 overflow-hidden lg:flex lg:px-16 lg:justify-between">
-        <div className="flex items-center gap-x-4">
-          <NavLink to={"/"}>
-            <img src={logo} alt="furniro logo" width={50} height={50} className="w-full" />
-          </NavLink>
-          <span className="font-bold text-3xl hidden lg:inline-block">
-            Furniro
-          </span>
-        </div>
+        <NavLink to={"/"}>
+          <div className="flex items-center gap-x-4">
+            <img
+              src={logo}
+              alt="furniro logo"
+              width={50}
+              height={50}
+              className="w-full"
+            />
+
+            <span className="font-bold text-3xl hidden lg:inline-block">
+              Furniro
+            </span>
+          </div>
+        </NavLink>
         <div className="hidden lg:flex">
           <HeaderLinks />
         </div>
         <div className="flex items-center gap-x-5 lg:gap-x-10">
-          <img src={profile} alt="profile" className="w-8" width={10} height={10} />
+          <img
+            src={profile}
+            alt="profile"
+            className="w-8"
+            width={10}
+            height={10}
+          />
           <button
             className="relative z-20"
             onClick={() => {

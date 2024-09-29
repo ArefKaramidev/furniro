@@ -7,9 +7,6 @@ import { useContext, useEffect } from "react";
 import { cartContext } from "../context/cartContext";
 
 const Product = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
   const { addToCart } = useContext(cartContext);
   return (
     <>

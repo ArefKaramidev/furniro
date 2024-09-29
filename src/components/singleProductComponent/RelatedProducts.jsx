@@ -6,9 +6,6 @@ import likeProduct from "../../assets/icons/likeProduct.svg";
 import { useContext, useEffect } from "react";
 import { cartContext } from "../../context/cartContext";
 const RelatedProducts = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
   const { addToCart } = useContext(cartContext);
   return (
     <>
@@ -22,6 +19,9 @@ const RelatedProducts = () => {
               to={`/shop/${item.id}`}
               key={item.id}
               className="relative group transition-all"
+              onClick={() => {
+                window.scrollTo(0, 0);
+              }}
             >
               <div
                 className="absolute z-20 bg-transparent
@@ -33,6 +33,7 @@ const RelatedProducts = () => {
                     className="bg-seconday text-primary px-12 py-3  duration-150 active:scale-90"
                     onClick={() => {
                       addToCart(item);
+                      window.scrollTo(0, 0);
                     }}
                   >
                     Add to cart

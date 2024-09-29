@@ -19,7 +19,6 @@ const ProductDetail = () => {
     img.src = src;
   };
   useEffect(() => {
-    window.scrollTo(0, 0);
     preloadImage(first);
     preloadImage(second);
     preloadImage(four);
@@ -198,17 +197,12 @@ const ProductDetail = () => {
               </button>
               <input
                 type="number"
-                className="font-medium text-xl border-none outline-none bg-transparent left-1 w-32 text-center"
+                className="font-medium text-xl border-none outline-none bg-transparent left-1 w-10 text-center"
                 ref={inputCount}
-                min={1}
                 defaultValue={count}
-                max={50}
-                minLength={1}
-                maxLength={2}
+                pattern="/^-?\d+\.?\d*$/"
                 onInput={(e) => {
-                  e.target.value < 1
-                    ? (e.target.value = 1)
-                    : console.log("aref");
+                  e.target.value < 1 && (e.target.value = 1);
                 }}
               />
               <button

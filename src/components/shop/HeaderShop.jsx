@@ -12,9 +12,9 @@ const HeaderShop = () => {
             loading="eager"
             src={headerShop}
             alt="headerShop"
-            className="w-full"
-            width={800}
-            height={300}
+             className="w-full"
+            width={15200}
+            height={500}
           />
           <div className="absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center">
             <span className="font-bold text-3xl lg:text-5xl">Shop</span>

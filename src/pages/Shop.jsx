@@ -6,9 +6,6 @@ import Footer from "../components/Footer";
 import { useEffect } from "react";
 
 const Shop = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
   return (
     <>
       <Navbar />

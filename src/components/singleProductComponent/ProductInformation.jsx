@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import sofa1 from "/public/img/info.png";
 import sofa2 from "/public/img/info2.png";
 
