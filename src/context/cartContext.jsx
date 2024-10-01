@@ -39,9 +39,10 @@ const ContextProvider = ({ children }) => {
   };
 
   const removeCartItem = (id) => {
-    const cart = cartData.filter((item) => item.id !== id);
+    const cart = cartData.filter((item) => item.id != id);
     const resetProductCount = cartData.find((item) => item.id == id);
     resetProductCount.count = 0;
+
     setToLocalStorage(cart);
     setCartData(cart);
   };

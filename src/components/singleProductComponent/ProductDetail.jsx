@@ -1,30 +1,36 @@
 import { useParams } from "react-router";
 import { productsData } from "../../data/productsData";
 import { NavLink } from "react-router-dom";
-import { useContext, useEffect, useRef, useState } from "react";
+import {
+  useCallback,
+  useContext,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from "react";
 import stars from "../../assets/icons/stars..svg";
 import facebook from "../../assets/icons/facebook.svg";
 import linkedIn from "../../assets/icons/linkedin.svg";
 import twitter from "../../assets/icons/twitter.svg";
 import { cartContext } from "../../context/cartContext";
-import first from "/public/img/sofaSlide2.webp";
-import second from "../../../public/img/deskSlid1.webp";
-import third from "/public/img/sofaSlide3.webp";
-import fourth from "../../../public/img/deskSlide2.webp";
+import first from "/public/img/img1.jpg";
+import second from "/public/img/img2.jpg";
+import third from "/public/img/img3.jpg";
+import fourth from "/public/img/img4.jpg";
 import fivth from "/public/img/shop5.png";
 import Slider from "./Slide";
+import { Helmet } from "react-helmet";
 
 const ProductDetail = () => {
-  const preloadImage = (src) => {
+  const preloadImage = useCallback((src) => {
     const img = new Image();
     img.src = src;
-  };
-  useEffect(() => {
-    preloadImage(first);
-    preloadImage(second);
-    preloadImage(fourth);
-    preloadImage(fivth);
   }, []);
+
+  useEffect(() => {
+    [first, second, third, fourth, fivth].forEach((src) => preloadImage(src));
+  }, [preloadImage]);
 
   const inputCount = useRef();
   const [count, setCount] = useState(1);
@@ -38,7 +44,7 @@ const ProductDetail = () => {
     inputCount.current.value = count;
   }, [count]);
 
-  const countHandler = (mode) => {
+  const countHandler = useCallback((mode) => {
     setCount((prevCount) => {
       if (mode === "max") {
         return prevCount + 1;
@@ -46,13 +52,13 @@ const ProductDetail = () => {
         return prevCount > 1 ? prevCount - 1 : prevCount;
       }
     });
-    inputCount.current.value = count;
-  };
+  }, []);
 
   const addProductHandler = (obj) => {
     if (inputCount.current.value == 1) {
-      obj.count += 1;
-      addToCart(obj, +inputCount.current.value);
+      obj.count = 1;
+      addToCart(obj, 1);
+      setCount(1);
     } else {
       obj.count = +inputCount.current.value;
       addToCart(obj, +inputCount.current.value);
@@ -61,31 +67,48 @@ const ProductDetail = () => {
     inputCount.current.value = count;
   };
 
+  const handleInputChange = useCallback((e) => {
+    const value = e.target.value;
+    if (value < 1) {
+      e.target.value = 1;
+    }
+  }, []);
+
   return (
     <>
+      <Helmet>
+        <link rel="prefetch" href={first} as="image" />
+        <link rel="prefetch" href={second} as="image" />
+        <link rel="prefetch" href={third} as="image" />
+        <link rel="prefetch" href={fourth} as="image" />
+      </Helmet>
+      ;
       <div className="flex flex-col justify-evenly w-full px-10 mt-10 items-center gap-y-20 lg:flex-row lg:items-start lg:px-0">
-        <div className="flex flex-col-reverse items-center lg:space-x-10 lg:flex-row lg:items-start">
-          <div className="flex items-center justify-center gap-x-4 mt-10 lg:mt-0 lg:flex-col lg:space-y-10 lg:items-start">
-            <Slider src={first} setFocus={setFocus} setSlide={setSlide} />
-            <Slider src={second} setFocus={setFocus} setSlide={setSlide} />
-            <Slider src={third} setFocus={setFocus} setSlide={setSlide} />
-            <Slider src={fourth} setFocus={setFocus} setSlide={setSlide} />
-            <Slider src={fivth} setFocus={setFocus} setSlide={setSlide} />
-          </div>
-          {slide && (
-            <div>
-              <img
-                src={slide}
-                alt="five product image"
-                className="w-[26rem] h-[20rem] rounded-md xl:w-[35rem] xl:h-[24rem]"
-                width={400}
-                height={400}
-              />
+        {useMemo(() => {
+          return (
+            <div className="flex flex-col-reverse items-center  lg:space-x-10 lg:flex-row lg:items-start">
+              <div className="flex items-center justify-center gap-x-4 mt-10 lg:mt-0 lg:flex-col lg:space-y-10 lg:items-start">
+                <Slider src={first} setFocus={setFocus} setSlide={setSlide} />
+                <Slider src={second} setFocus={setFocus} setSlide={setSlide} />
+                <Slider src={third} setFocus={setFocus} setSlide={setSlide} />
+                <Slider src={fourth} setFocus={setFocus} setSlide={setSlide} />
+              </div>
+              {slide && (
+                <div>
+                  <img
+                    src={slide}
+                    loading="lazy"
+                    alt="five product image"
+                    className="w-[26rem] h-[20rem] rounded-md xl:w-[35rem] xl:h-[24rem]"
+                    width={400}
+                    height={400}
+                  />
+                </div>
+              )}
             </div>
-          )}
-
-          {/* --------------------- */}
-        </div>
+          );
+        }, [slide])}
+        {/* --------------------- */}
 
         <div className="flex flex-col gap-5 items-center lg:items-start">
           <span className="text-4xl font-medium">{product.title}</span>
@@ -141,9 +164,7 @@ const ProductDetail = () => {
                 ref={inputCount}
                 defaultValue={count}
                 pattern="/^-?\d+\.?\d*$/"
-                onInput={(e) => {
-                  e.target.value < 1 && (e.target.value = 1);
-                }}
+                onInput={handleInputChange}
               />
               <button
                 className="px-4 py-4 rounded-tr-md rounded-br-md"
@@ -204,7 +225,6 @@ const ProductDetail = () => {
           </div>
         </div>
       </div>
-
       <hr className="my-20 h-[2px] bg-gray-300" />
     </>
   );

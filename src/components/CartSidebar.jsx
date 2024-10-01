@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import CartItem from "./CartItem";
-import { useContext } from "react";
+import { memo, useContext } from "react";
 import { cartContext } from "../context/cartContext";
 
 const CartSidebar = ({ openCart }) => {
@@ -49,4 +49,4 @@ const CartSidebar = ({ openCart }) => {
   );
 };
 
-export default CartSidebar;
+export default memo(CartSidebar);

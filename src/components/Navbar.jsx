@@ -53,7 +53,7 @@ const Navbar = () => {
             <img
               src={isOpen ? closeCart : cart}
               alt="cart logo"
-              className="w-5 xl:w-8"
+              className="w-5 xl:w-7"
               width={20}
               height={20}
             />

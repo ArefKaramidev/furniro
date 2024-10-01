@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react";
+import { memo, useEffect, useState } from "react";
 import { Blurhash } from "react-blurhash";
 
-const Slider = ({ src, setFocus, setSlide }) => {
+const Slider = memo(({ src, setFocus, setSlide }) => {
   const [imageLoaded, setimageLoaded] = useState(false);
 
   useEffect(() => {
@@ -47,6 +47,6 @@ const Slider = ({ src, setFocus, setSlide }) => {
       )}
     </>
   );
-};
+});
 
 export default Slider;

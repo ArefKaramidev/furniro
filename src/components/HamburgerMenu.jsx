@@ -13,7 +13,13 @@ const HamburgerMenu = () => {
         }}
       >
         {isOpen ? (
-          <img src={close} alt="close cart" width={10} height={10} className="w-full" />
+          <img
+            src={close}
+            alt="close cart"
+            width={10}
+            height={10}
+            className="w-full"
+          />
         ) : (
           <>
             <div className="w-8 h-1 bg-black rounded-sm"></div>
