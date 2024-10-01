@@ -16,16 +16,16 @@ const Main = () => {
           height={1080}
           loading="eager"
         />
-        <div className="bg-seconday w-full h-full top-44 right-10 p-10 xl:absolute xl:w-[693px] xl:h-[463px]">
+        <div className="bg-seconday w-full h-full right-10 top-44 p-10 xl:absolute xl:w-[693px] xl:h-[463px]">
           <span className="font-bold text-lg tracking-[5px] block mt-8">
             New Arrival
           </span>
-          <div className="w-96 lg:w-[24rem]">
+          <div className="">
             <span className="text-primary font-bold mb-10 text-5xl leading-tight">
               Discover Our New Collection
             </span>
           </div>
-          <span className="text-lg font-medium block mb-12 w-80">
+          <span className="text-lg font-medium block mb-12">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, eum
             soluta? Quisquam quibusdam maiores tempora repudiandae?
           </span>
