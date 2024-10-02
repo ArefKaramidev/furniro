@@ -1,7 +1,7 @@
 import { memo, useEffect, useState } from "react";
 import { Blurhash } from "react-blurhash";
 
-const Slider = memo(({ src, setFocus, setSlide }) => {
+const Slider = memo(({ src, setFocus, setSlide , focus }) => {
   const [imageLoaded, setimageLoaded] = useState(false);
 
   useEffect(() => {
@@ -11,9 +11,6 @@ const Slider = memo(({ src, setFocus, setSlide }) => {
     };
     img.src = src;
   }, [src]);
-  const focusStyle = (img) => {
-    setFocus(img);
-  };
 
   return (
     <>
@@ -38,7 +35,7 @@ const Slider = memo(({ src, setFocus, setSlide }) => {
           className="w-20 h-20 rounded-md cursor-pointer"
           onClick={() => {
             setSlide(src);
-            focusStyle(src);
+            setFocus(src);
           }}
           style={{
             border: focus === src ? "solid 2px #B88E2F" : "none",

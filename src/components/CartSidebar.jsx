@@ -1,10 +1,11 @@
 import { NavLink } from "react-router-dom";
 import CartItem from "./CartItem";
-import { memo, useContext } from "react";
+import { memo, useContext, useMemo } from "react";
 import { cartContext } from "../context/cartContext";
 
 const CartSidebar = ({ openCart }) => {
-  const { getTotal } = useContext(cartContext);
+  const { getTotal, cartData } = useContext(cartContext);
+  const totalPrice = useMemo(() => getTotal(), [cartData]);
 
   return (
     <>
@@ -15,12 +16,17 @@ const CartSidebar = ({ openCart }) => {
 
         <div>
           <div className="flex flex-col gap-y-5 py-4">
-            {openCart ? <CartItem /> : console.log("noo")}
+            {useMemo(
+              () => (
+                <CartItem />
+              ),
+              [openCart]
+            )}
           </div>
           <div className="flex items-center justify-evenly py-5">
             <span className="font-medium">Subtotal</span>
             <span className="text-primary font-medium text-xl">
-              {getTotal()}
+              {totalPrice}
             </span>
           </div>
         </div>
@@ -49,4 +55,4 @@ const CartSidebar = ({ openCart }) => {
   );
 };
 
-export default memo(CartSidebar);
+export default CartSidebar;

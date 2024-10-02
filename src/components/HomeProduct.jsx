@@ -21,10 +21,9 @@ const HomeProduct = () => {
               key={item.id}
               className="relative group transition-all"
             >
-              {/* Hover overlay container */}
               <div
                 className="absolute z-20 bg-transparent flex flex-col w-full h-full items-center 
-    transition-all justify-center opacity-0 group-hover:opacity-50" // Changed opacity value
+    transition-all justify-center opacity-0 group-hover:opacity-50"
               />
               <div className="absolute w-full h-full flex justify-center items-center flex-col opacity-0 group-hover:opacity-100">
                 <div className="flex flex-col items-center justify-center w-full h-full">
@@ -37,13 +36,18 @@ const HomeProduct = () => {
                     Add to cart
                   </button>
                   <div className="flex flex-wrap justify-center items-center mt-4">
-                    <img src={share} alt="Share" />
-                    <img src={compair} alt="Compare" className="px-4" />
-                    <img src={likeProduct} alt="Like" />
+                    <img src={share} alt="Share" width={10} height={10} />
+                    <img
+                      src={compair}
+                      alt="Compare"
+                      className="px-4"
+                      width={10}
+                      height={10}
+                    />
+                    <img src={likeProduct} alt="Like" width={10} height={10} />
                   </div>
                 </div>
               </div>
-              {/* Product Image and Info */}
               <div>
                 <img
                   src={item.image}

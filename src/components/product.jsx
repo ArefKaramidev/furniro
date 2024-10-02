@@ -33,14 +33,19 @@ const Product = () => {
                     Add to cart
                   </button>
                   <div className="flex flex-wrap justify-center items-center mt-4">
-                    <img src={share} alt="share" />
-                    <img src={compair} alt="compair" className="px-4" />
-                    <img src={likeProduct} alt="likeProduct" />
+                    <img src={share} alt="share" width={10} height={10}/>
+                    <img src={compair} alt="compair" className="px-4" width={10} height={10}/>
+                    <img src={likeProduct} alt="likeProduct" width={10} height={10}/>
                   </div>
                 </div>
               </div>
               <div>
-                <img src={item.image} alt={item.title} />
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  width={200}
+                  height={100}
+                />
                 <div className="flex flex-col items-start justify-between bg-[#F4F5F7] p-3 ">
                   <span className="font-bold text-xl">{item.title}</span>
                   <span className="text-[#B0B0B0]">{item.des}</span>

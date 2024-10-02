@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import { useState } from "react";
+import { useMemo, useState } from "react";
 
 import profile from "../assets/icons/profile.svg";
 import cart from "../assets/icons/cart.svg";
@@ -11,9 +11,6 @@ import HeaderLinks from "./LinksHeader";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const openCartSidebar = () => {
-    setIsOpen(!isOpen);
-  };
 
   return (
     <>
@@ -63,7 +60,9 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      {isOpen && <CartSidebar openCart={isOpen} />}
+      {useMemo(() => {
+        return isOpen && <CartSidebar openCart={isOpen} />;
+      }, [isOpen])}
     </>
   );
 };

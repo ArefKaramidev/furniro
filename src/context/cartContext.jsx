@@ -17,10 +17,10 @@ const ContextProvider = ({ children }) => {
       JSON.parse(localStorage.getItem("productData")) || [];
 
     const prevProductIndex = productSavedData.findIndex(
-      (item) => item.id === data.id
+      (item) => item.id == data.id
     );
 
-    if (prevProductIndex === -1) {
+    if (prevProductIndex == -1) {
       productSavedData = [...productSavedData, data];
     } else {
       productSavedData[prevProductIndex].count += count;
@@ -47,11 +47,10 @@ const ContextProvider = ({ children }) => {
     setCartData(cart);
   };
   const getTotal = () => {
-    const total = cartData.reduce(
+    return cartData.reduce(
       (prev, current) => prev + current.price * current.count,
       0
     );
-    return total;
   };
 
   return (

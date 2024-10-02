@@ -4,7 +4,7 @@ export const productsData = [
     title: "Syltherine",
     image: "/img/image 1.png",
     des: "Stylish cafe chair",
-    price: " 2500000",
+    price: 2500000,
     count: 1,
   },
   {
