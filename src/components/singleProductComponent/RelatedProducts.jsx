@@ -40,8 +40,19 @@ const RelatedProducts = () => {
                   </button>
                   <div className="flex flex-wrap justify-center items-center mt-4">
                     <img src={share} alt="share" width={10} height={10} />
-                    <img src={compair} alt="compaire" className="px-4" width={10} height={10} />
-                    <img src={likeProduct} alt="likeProduct" width={10} height={10} />
+                    <img
+                      src={compair}
+                      alt="compaire"
+                      className="px-4"
+                      width={10}
+                      height={10}
+                    />
+                    <img
+                      src={likeProduct}
+                      alt="likeProduct"
+                      width={10}
+                      height={10}
+                    />
                   </div>
                 </div>
               </div>
@@ -58,7 +69,7 @@ const RelatedProducts = () => {
                   <div>
                     <span className="font-bold text-xl">{item.price} </span>
                     <span className="ml-2 line-through text-[#B0B0B0]">
-                      {item.price}
+                      {item.price.toLocaleString()}
                     </span>
                   </div>
                 </div>

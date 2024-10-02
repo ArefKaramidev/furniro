@@ -26,7 +26,7 @@ const CartSidebar = ({ openCart }) => {
           <div className="flex items-center justify-evenly py-5">
             <span className="font-medium">Subtotal</span>
             <span className="text-primary font-medium text-xl">
-              {totalPrice}
+              {totalPrice.toLocaleString()}
             </span>
           </div>
         </div>

@@ -53,7 +53,7 @@ const Order = () => {
     <div className="flex flex-col gap-5 items-center lg:items-start">
       <span className="text-4xl font-medium">{product.title}</span>
       <span className="text-3xl font-medium text-gray-400">
-        {product.price}
+        {product.price.toLocaleString()}
       </span>
       <div className="flex flex-col items-center lg:items-start gap-y-10">
         <div className=" flex items-center gap-x-8">

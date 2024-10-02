@@ -20,7 +20,7 @@ const CartItem = () => {
             <span>{item.title}</span>
             <div className="flex items-center gap-x-4">
               <span>{item.count} x</span>
-              <span className="font-medium text-primary">{item.price}</span>
+              <span className="font-medium text-primary">{item.price.toLocaleString()}</span>
             </div>
           </div>
           <button onClick={() => removeCartItem(item.id)}>

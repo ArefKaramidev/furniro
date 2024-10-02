@@ -11,7 +11,7 @@ const ShowTotal = memo(({ getTotal }) => {
       </div>
       <div className="flex items-center justify-evenly gap-x-14">
         <span className="font-medium">Total</span>
-        <span className="font-medium text-primary">Rs . {getTotal}</span>
+        <span className="font-medium text-primary">Rs . {getTotal.toLocaleString()}</span>
       </div>
       <div>
         <NavLink

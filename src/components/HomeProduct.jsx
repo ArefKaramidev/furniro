@@ -60,9 +60,9 @@ const HomeProduct = () => {
                   <span className="font-bold text-xl">{item.title}</span>
                   <span className="text-[#B0B0B0]">{item.des}</span>
                   <div>
-                    <span className="font-bold text-xl">{item.price} </span>
+                    <span className="font-bold text-xl">{item.price.toLocaleString()} </span>
                     <span className="ml-2 line-through text-[#B0B0B0]">
-                      {item.price}
+                      {item.price.toLocaleString()}
                     </span>
                   </div>
                 </div>

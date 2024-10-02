@@ -39,7 +39,7 @@ const MainCart = () => {
                   </td>
                   <td className="font-medium text-gray-400  ">{item.title}</td>
                   <td className="text-gray-400 font-normal  ">
-                    Rs. {item.price}
+                    Rs. {item.price.toLocaleString()}
                   </td>
                   <td className="w-20">
                     <input
@@ -69,7 +69,7 @@ const MainCart = () => {
             </tbody>
           </table>
         </div>
-        <ShowTotal getTotal={getTotal()} />
+        <ShowTotal getTotal={getTotal().toLocaleString()} />
       </div>
     </>
   );
