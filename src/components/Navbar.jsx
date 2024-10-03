@@ -60,9 +60,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      {useMemo(() => {
-        return isOpen && <CartSidebar openCart={isOpen} />;
-      }, [isOpen])}
+      {isOpen && <CartSidebar />}
     </>
   );
 };

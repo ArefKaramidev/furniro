@@ -1,12 +1,10 @@
 import { NavLink } from "react-router-dom";
 import CartItem from "./CartItem";
-import { memo, useContext, useMemo } from "react";
+import { useContext } from "react";
 import { cartContext } from "../context/cartContext";
+import TotalItem from "./singleProductComponent/TotalItem";
 
-const CartSidebar = ({ openCart }) => {
-  const { getTotal, cartData } = useContext(cartContext);
-  const totalPrice = useMemo(() => getTotal(), [cartData]);
-
+const CartSidebar = () => {
   return (
     <>
       <div className="absolute bg-white top-0 right-0 px-5 py-2 z-10 w-full lg:w-[28rem] lg:gap-x-4">
@@ -16,19 +14,9 @@ const CartSidebar = ({ openCart }) => {
 
         <div>
           <div className="flex flex-col gap-y-5 py-4">
-            {useMemo(
-              () => (
-                <CartItem />
-              ),
-              [openCart]
-            )}
+            <CartItem />
           </div>
-          <div className="flex items-center justify-evenly py-5">
-            <span className="font-medium">Subtotal</span>
-            <span className="text-primary font-medium text-xl">
-              {totalPrice.toLocaleString()}
-            </span>
-          </div>
+          <TotalItem />
         </div>
 
         <div className="h-[1px] bg-gray-400"></div>
